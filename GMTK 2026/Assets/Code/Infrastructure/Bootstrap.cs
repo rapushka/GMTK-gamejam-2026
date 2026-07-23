@@ -10,7 +10,6 @@ namespace Core
         private void Awake()
         {
             _game = new();
-            _game.Init();
         }
 
         private void Start()

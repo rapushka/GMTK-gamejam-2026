@@ -2,8 +2,18 @@ namespace Core
 {
     public class Game
     {
-        public void Init() { }
+        private readonly GameStateMachine _stateMachine;
 
-        public void OnGameLoaded() { }
+        public Game()
+        {
+            _stateMachine = new(
+                new InitGameState()
+            );
+        }
+
+        public void OnGameLoaded()
+        {
+            _stateMachine.Enter<InitGameState>();
+        }
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace Core
 {
+    // Just a Marker to show, that the class should be accessed through ServiceLocator
     public interface IService { }
 
     public static class ServiceLocator

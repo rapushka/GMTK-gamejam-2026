@@ -2,14 +2,9 @@ namespace Core
 {
     public class Game
     {
-        private readonly GameStateMachine _stateMachine;
-
-        public Game()
-        {
-            _stateMachine = new(
-                new InitGameState()
-            );
-        }
+        private readonly GameStateMachine _stateMachine = new(
+            new InitGameState()
+        );
 
         public void OnGameLoaded()
         {

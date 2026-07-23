@@ -401,6 +401,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 425163d6231e4a33891f03704da2cd1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Core.Bootstrap
+  _assetsProvider:
+    <GameScreenPrefab>k__BackingField: {fileID: 4424623019042248502, guid: 9d2acedc793ae3dc28a7eeec4aa60c56, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

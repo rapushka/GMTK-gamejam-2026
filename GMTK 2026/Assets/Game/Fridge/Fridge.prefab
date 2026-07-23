@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3939354172291927636}
+  - component: {fileID: 6166671208420049690}
   - component: {fileID: 3112255486224995576}
   m_Layer: 0
   m_Name: shelf 2
@@ -32,6 +33,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7880796460823603283}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6166671208420049690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564626252430829734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4deaa537615d456aa8987b7e39db1d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.Shelf
+  _collider: {fileID: 6334976154056398206}
 --- !u!61 &3112255486224995576
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -125,10 +139,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Core.Fridge
   _shelves:
-  - {fileID: 6334976154056398206}
-  - {fileID: 3112255486224995576}
-  - {fileID: 2883194069502364542}
-  - {fileID: 4303861554470618226}
+  - {fileID: 4713964836297440180}
+  - {fileID: 6166671208420049690}
+  - {fileID: 3711250927854072721}
+  - {fileID: 4440621815816884222}
 --- !u!1 &1476276702753014912
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +152,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3791073204542597469}
+  - component: {fileID: 3711250927854072721}
   - component: {fileID: 2883194069502364542}
   m_Layer: 0
   m_Name: shelf 3
@@ -161,6 +176,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7880796460823603283}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3711250927854072721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1476276702753014912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4deaa537615d456aa8987b7e39db1d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.Shelf
+  _collider: {fileID: 6334976154056398206}
 --- !u!61 &2883194069502364542
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -343,6 +371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2354076295159322104}
+  - component: {fileID: 4713964836297440180}
   - component: {fileID: 6334976154056398206}
   m_Layer: 0
   m_Name: shelf 1
@@ -366,6 +395,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7880796460823603283}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4713964836297440180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2054932883224439390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4deaa537615d456aa8987b7e39db1d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.Shelf
+  _collider: {fileID: 6334976154056398206}
 --- !u!61 &6334976154056398206
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -453,6 +495,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2322131239799327968}
+  - component: {fileID: 4440621815816884222}
   - component: {fileID: 4303861554470618226}
   m_Layer: 0
   m_Name: shelf 4
@@ -476,6 +519,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7880796460823603283}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4440621815816884222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4704447041522908145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4deaa537615d456aa8987b7e39db1d9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.Shelf
+  _collider: {fileID: 6334976154056398206}
 --- !u!61 &4303861554470618226
 BoxCollider2D:
   m_ObjectHideFlags: 0

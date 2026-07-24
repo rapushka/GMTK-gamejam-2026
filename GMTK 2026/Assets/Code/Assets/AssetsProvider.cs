@@ -7,7 +7,8 @@ namespace Core
     public class AssetsProvider : IService
     {
         [field: SerializeField] public GameScreen GameScreenPrefab { get; private set; }
-
+        
+        [field: SerializeField] public GameplayHUD GameplayHUDPrefab { get; private set; }
         [field: SerializeField] public Item PlaceholderItemPrefab { get; private set; }
     }
 }

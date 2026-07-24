@@ -2,20 +2,21 @@ namespace Core
 {
     public class Game
     {
-        private static InputController InputController => ServiceLocator.Get<InputController>();
+        private static InputSystem InputSystem => ServiceLocator.Get<InputSystem>();
 
         private readonly GameStateMachine _stateMachine = new(
-            new InitGameState()
+            new StartGameState()
         );
 
         public void OnGameLoaded()
         {
-            _stateMachine.Enter<InitGameState>();
+            // TODO: Main Menu and stuff
+            _stateMachine.Enter<StartGameState>();
         }
 
         public void OnUpdate()
         {
-            InputController.OnUpdate();
+            InputSystem.OnUpdate();
         }
     }
 }

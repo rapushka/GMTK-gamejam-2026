@@ -12,8 +12,8 @@ namespace Core
         private void Awake()
         {
             ServiceLocator.Set(_assetsProvider);
-            ServiceLocator.Set(new CameraController(_mainCamera));
-            ServiceLocator.Set(new InputController());
+            ServiceLocator.Set(new CameraSystem(_mainCamera));
+            ServiceLocator.Set(new InputSystem());
 
             _game = new();
         }

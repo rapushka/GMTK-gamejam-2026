@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using UnityEngine;
 
 namespace Core
@@ -10,7 +11,7 @@ namespace Core
         public Vector2 WorldPosition
         {
             get => transform.position;
-            set => transform.position = value;
+            set => transform.position = value.WithZ(SortingZ.Item);
         }
 
         public void StartDrag(Vector2 mouseWorld)

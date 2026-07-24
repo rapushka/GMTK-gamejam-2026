@@ -14,6 +14,8 @@ namespace Core
             ServiceLocator.Set(_assetsProvider);
             ServiceLocator.Set(new CameraSystem(_mainCamera));
             ServiceLocator.Set(new InputSystem());
+            ServiceLocator.Set(new ScreensMediator());
+            ServiceLocator.Set(new ItemSpawnSystem());
 
             _game = new();
         }

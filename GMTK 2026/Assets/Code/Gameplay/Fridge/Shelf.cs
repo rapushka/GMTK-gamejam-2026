@@ -8,11 +8,16 @@ namespace Core
 
         private Bounds Bounds => _collider.bounds;
 
-        public Vector2 CreateRandomPosition()
-            => new()
+        private Vector2 WorldPosition => transform.position;
+
+        public Vector2 CreateRandomPoint()
+        {
+            var localPoint = new Vector2
             {
                 x = Random.Range(Bounds.min.x, Bounds.max.x),
                 y = Bounds.max.y,
             };
+            return localPoint + WorldPosition;
+        }
     }
 }

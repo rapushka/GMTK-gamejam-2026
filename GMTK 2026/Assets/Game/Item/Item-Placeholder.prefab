@@ -88,6 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1811198863968298775}
   - component: {fileID: 2127651770100132692}
+  - component: {fileID: 3775844028985045419}
   m_Layer: 0
   m_Name: Item-Placeholder
   m_TagString: Untagged
@@ -124,6 +125,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e48f8413787b4a94b4c8efd60a1df3e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Core.Item
+--- !u!114 &3775844028985045419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852802910001462206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1742d4d104544499bee35bb892b67233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DefaultNamespace.SelectionBase
 --- !u!1 &1273327037758732048
 GameObject:
   m_ObjectHideFlags: 0

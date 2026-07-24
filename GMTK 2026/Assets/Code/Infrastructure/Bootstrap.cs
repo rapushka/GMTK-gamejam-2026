@@ -19,6 +19,7 @@ namespace Core
             ServiceLocator.Set(new InputSystem());
             ServiceLocator.Set(new ScreensMediator());
             ServiceLocator.Set(new ItemSpawnSystem());
+            ServiceLocator.Set(new UIMediator());
             ServiceLocator.Set(_uiRoot);
 
             _game = new();

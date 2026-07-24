@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace DefaultNamespace
+namespace Core
 {
     public static class VectorExtensions
     {

@@ -17,12 +17,16 @@ namespace Core
 
             if (mouse.leftButton.wasPressedThisFrame)
                 OnMouseDown();
+
+            else if (_draggedItem != null && Mouse.current.leftButton.isPressed)
+                Drag();
+
+            else if (mouse.leftButton.wasReleasedThisFrame)
+                OnMouseUp();
         }
 
         private void OnMouseDown()
         {
-            var mouse = Mouse.current;
-
             var hit = Physics2D.OverlapPoint(_mouseWorldPosition);
 
             if (hit != null && hit.TryGetComponent(out Item item))
@@ -30,11 +34,20 @@ namespace Core
                 _draggedItem = item;
                 _draggedItem.StartDrag(_mouseWorldPosition);
             }
+        }
 
-            // var screen = mouse.position.ReadValue();
-            // var pressed = mouse.leftButton.isPressed;
-            // var justPressed = mouse.leftButton.wasPressedThisFrame;
-            // var justReleased = mouse.leftButton.wasReleasedThisFrame;
+        private void Drag()
+        {
+            _draggedItem.Drag(_mouseWorldPosition);
+        }
+
+        private void OnMouseUp()
+        {
+            if (_draggedItem != null)
+            {
+                _draggedItem.EndDrag();
+                _draggedItem = null;
+            }
         }
     }
 }

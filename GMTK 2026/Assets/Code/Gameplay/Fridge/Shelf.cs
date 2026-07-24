@@ -19,5 +19,22 @@ namespace Core
             };
             return point;
         }
+
+        public Vector2 ClampItem(Vector2 worldPoint, Bounds itemBounds)
+        {
+            var halfW = itemBounds.extents.x;
+            var halfH = itemBounds.extents.y;
+
+            var minX = Bounds.min.x + halfW;
+            var maxX = Bounds.max.x - halfW;
+            var minY = Bounds.min.y + halfH;
+            var maxY = Bounds.max.y - halfH;
+
+            return new()
+            {
+                x = minX > maxX ? Bounds.center.x : worldPoint.x.Clamp(minX, maxX),
+                y = minY > maxY ? Bounds.center.y : worldPoint.y.Clamp(minY, maxY),
+            };
+        }
     }
 }

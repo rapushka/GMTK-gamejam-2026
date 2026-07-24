@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Core
@@ -23,6 +24,11 @@ namespace Core
         private void Start()
         {
             _game.OnGameLoaded();
+        }
+
+        private void Update()
+        {
+            _game.OnUpdate();
         }
     }
 }

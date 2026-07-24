@@ -27,13 +27,11 @@ namespace Core
 
         private void OnMouseDown()
         {
-            var hit = Physics2D.OverlapPoint(_mouseWorldPosition);
+            if (!PhysicsUtils.TryGetComponentAtPoint(_mouseWorldPosition, out Item item))
+                return;
 
-            if (hit != null && hit.TryGetComponent(out Item item))
-            {
-                _draggedItem = item;
-                _draggedItem.StartDrag(_mouseWorldPosition);
-            }
+            _draggedItem = item;
+            _draggedItem.StartDrag(_mouseWorldPosition);
         }
 
         private void Drag()

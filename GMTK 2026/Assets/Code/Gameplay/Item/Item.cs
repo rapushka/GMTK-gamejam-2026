@@ -5,8 +5,15 @@ namespace Core
 {
     public class Item : MonoBehaviour
     {
-        private State _state = State.Idle;
+        [SerializeField] private Collider2D _collider;
+
+        private static ScreensMediator ScreensMediator => ServiceLocator.Get<ScreensMediator>();
+
         private Vector2 _grabOffset;
+        private Vector2 _startPosition;
+        private Vector2 _lasMousePosition;
+
+        public Bounds Bounds => _collider.bounds;
 
         public Vector2 WorldPosition
         {
@@ -16,26 +23,44 @@ namespace Core
 
         public void StartDrag(Vector2 mouseWorld)
         {
-            _state = State.Dragged;
             _grabOffset = WorldPosition - mouseWorld;
+            _startPosition = WorldPosition;
         }
 
         public void Drag(Vector2 mouseWorld)
         {
-            WorldPosition = mouseWorld + _grabOffset;
+            _lasMousePosition = mouseWorld;
+            WorldPosition = _lasMousePosition + _grabOffset;
         }
 
         public void EndDrag()
         {
-            _state = State.Settling;
-            // TODO: look for shelves?
+            var fridge = ScreensMediator.GameScreen.Fridge;
+            var isDroppedInFridge = fridge.IsInBounds(_lasMousePosition);
+
+            if (isDroppedInFridge)
+                DropOnClosestShelf();
+            else
+                ReturnToStart();
         }
 
-        private enum State
+        private void ReturnToStart()
         {
-            Idle,
-            Dragged,
-            Settling,
+            WorldPosition = _startPosition;
+        }
+
+        private void DropOnClosestShelf()
+        {
+            var fridge = ScreensMediator.GameScreen.Fridge;
+            var shelf = fridge.FindDropShelf(WorldPosition);
+
+            if (shelf is null)
+            {
+                ReturnToStart();
+                return;
+            }
+
+            WorldPosition = shelf.ClampItem(WorldPosition, _collider.bounds);
         }
     }
 }

@@ -6,6 +6,8 @@ namespace Core
     {
         [SerializeField] private Collider2D _collider;
 
+        public float SurfaceY => Bounds.max.y;
+
         private Bounds Bounds => _collider.bounds;
 
         private Vector2 WorldPosition => transform.position;

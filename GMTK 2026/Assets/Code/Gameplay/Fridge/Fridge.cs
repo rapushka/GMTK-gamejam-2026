@@ -18,13 +18,16 @@ namespace Core
         [CanBeNull]
         public Shelf FindDropShelf(Vector2 dropPosition)
         {
+            const float slack = Constants.ItemDropSlack;
+
             Shelf target = null;
             var bestY = float.NegativeInfinity;
 
             foreach (var shelf in _shelves)
             {
                 var shelfSurfaceY = shelf.SurfaceY;
-                if (shelfSurfaceY <= dropPosition.y && shelfSurfaceY > bestY)
+
+                if (shelfSurfaceY - slack <= dropPosition.y && shelfSurfaceY > bestY)
                 {
                     bestY = shelfSurfaceY;
                     target = shelf;

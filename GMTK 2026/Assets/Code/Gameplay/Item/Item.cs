@@ -11,6 +11,9 @@ namespace Core
 
         private Vector2 _grabOffset;
         private Vector2 _startPosition;
+        private Vector2 _lasMousePosition;
+
+        public Bounds Bounds => _collider.bounds;
 
         public Vector2 WorldPosition
         {
@@ -26,15 +29,14 @@ namespace Core
 
         public void Drag(Vector2 mouseWorld)
         {
-            WorldPosition = mouseWorld + _grabOffset;
+            _lasMousePosition = mouseWorld;
+            WorldPosition = _lasMousePosition + _grabOffset;
         }
 
         public void EndDrag()
         {
-            var mouseWorld = WorldPosition - _grabOffset;
-
             var fridge = ScreensMediator.GameScreen.Fridge;
-            var isDroppedInFridge = fridge.IsInBounds(mouseWorld);
+            var isDroppedInFridge = fridge.IsInBounds(_lasMousePosition);
 
             if (isDroppedInFridge)
                 DropOnClosestShelf();

@@ -19,7 +19,8 @@ namespace Core
                 for (var i = 0; i < itemsPerShelf; i++)
                 {
                     var item = Object.Instantiate(itemPrefab);
-                    item.WorldPosition = shelf.CreateRandomPoint();
+                    var pointOnShelf = shelf.CreateRandomPoint();
+                    item.WorldPosition = shelf.ClampItem(pointOnShelf, item.Bounds);
                 }
             }
         }

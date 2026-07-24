@@ -6,8 +6,14 @@ namespace Core
     public class Fridge : MonoBehaviour
     {
         [SerializeField] private Shelf[] _shelves;
+        [SerializeField] private Collider2D _collider;
 
         public Shelf[] Shelves => _shelves;
+
+        public bool IsInBounds(Vector2 worldPoint)
+        {
+            return _collider.OverlapPoint(worldPoint);
+        }
 
         [CanBeNull]
         public Shelf FindDropShelf(Vector2 dropPosition)

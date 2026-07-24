@@ -33,9 +33,10 @@ namespace Core
         {
             var mouseWorld = WorldPosition - _grabOffset;
 
-            var droppedInFridge = PhysicsUtils.HasComponentAtPoint<Fridge>(mouseWorld);
+            var fridge = ScreensMediator.GameScreen.Fridge;
+            var isDroppedInFridge = fridge.IsInBounds(mouseWorld);
 
-            if (droppedInFridge)
+            if (isDroppedInFridge)
                 DropOnClosestShelf();
             else
                 ReturnToStart();

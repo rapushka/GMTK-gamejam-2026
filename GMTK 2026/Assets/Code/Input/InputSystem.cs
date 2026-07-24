@@ -5,10 +5,15 @@ namespace Core
 {
     public class InputSystem : IService
     {
+        private static CameraSystem CameraSystem => ServiceLocator.Get<CameraSystem>();
+
         private Item _draggedItem;
+        private Item _lastClickedItem;
         private Vector2 _mouseWorldPosition;
 
-        private static CameraSystem CameraSystem => ServiceLocator.Get<CameraSystem>();
+        private float _lastClickTime;
+
+        private bool IsUnderDoubleClickThreshold => Time.time - _lastClickTime < Constants.DoubleClickThreshold;
 
         public void OnUpdate()
         {
@@ -30,8 +35,21 @@ namespace Core
             if (!PhysicsUtils.TryGetComponentAtPoint(_mouseWorldPosition, out Item item))
                 return;
 
+            if (item == _lastClickedItem && IsUnderDoubleClickThreshold)
+            {
+                OnItemDoubleClicked();
+                return;
+            }
+
+            _lastClickTime = Time.time;
+            _lastClickedItem = item;
             _draggedItem = item;
             _draggedItem.StartDrag(_mouseWorldPosition);
+        }
+
+        private void OnItemDoubleClicked()
+        {
+            UnityEngine.Debug.Log("DOUBLE CLICK");
         }
 
         private void Drag()

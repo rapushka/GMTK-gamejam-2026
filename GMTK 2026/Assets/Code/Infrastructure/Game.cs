@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace Core
 {
     public class Game
@@ -5,7 +7,8 @@ namespace Core
         private static InputSystem InputSystem => ServiceLocator.Get<InputSystem>();
 
         private readonly GameStateMachine _stateMachine = new(
-            new StartGameState()
+            new StartGameState(),
+            new GameplayGameState()
         );
 
         public void OnGameLoaded()
@@ -16,7 +19,11 @@ namespace Core
 
         public void OnUpdate()
         {
+            var deltaTime = Time.deltaTime;
+
             InputSystem.OnUpdate();
+
+            _stateMachine.OnUpdate(deltaTime);
         }
     }
 }

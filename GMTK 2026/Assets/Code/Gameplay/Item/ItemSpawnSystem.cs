@@ -7,7 +7,7 @@ namespace Core
         private static AssetsProvider  AssetsProvider  => ServiceLocator.Get<AssetsProvider>();
         private static ScreensMediator ScreensMediator => ServiceLocator.Get<ScreensMediator>();
 
-        public void OnGameStart()
+        public void SpawnStartItems()
         {
             var itemPrefab = AssetsProvider.PlaceholderItemPrefab;
             var gameScreen = ScreensMediator.GameScreen;

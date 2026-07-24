@@ -518,6 +518,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Core.Bootstrap
   _assetsProvider:
     <GameScreenPrefab>k__BackingField: {fileID: 4424623019042248502, guid: 9d2acedc793ae3dc28a7eeec4aa60c56, type: 3}
+    <GameplayHUDPrefab>k__BackingField: {fileID: 3544040344921176913, guid: 139a4f738711a68458329d568dc3ed7f, type: 3}
     <PlaceholderItemPrefab>k__BackingField: {fileID: 2127651770100132692, guid: 46b8d32fb3a11e156a654c52550300a0, type: 3}
   _mainCamera: {fileID: 519420031}
   _uiRoot: {fileID: 190714908}

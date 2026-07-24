@@ -1,5 +1,3 @@
-using System;
-using TMPro;
 using UnityEngine;
 
 namespace Core
@@ -9,6 +7,7 @@ namespace Core
         [SerializeField] private AssetsProvider _assetsProvider;
         [SerializeField] private Camera _mainCamera;
         [SerializeField] private UiRoot _uiRoot;
+        [SerializeField] private BalanceConfig _balanceConfig;
 
         private Game _game;
 
@@ -21,6 +20,8 @@ namespace Core
             ServiceLocator.Set(new ItemSpawnSystem());
             ServiceLocator.Set(new UIMediator());
             ServiceLocator.Set(_uiRoot);
+            ServiceLocator.Set(new CalendarSystem());
+            ServiceLocator.Set(_balanceConfig);
 
             _game = new();
         }

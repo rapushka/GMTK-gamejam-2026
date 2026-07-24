@@ -4,4 +4,9 @@ namespace Core
     {
         public void Enter(GameStateMachine stateMachine);
     }
+
+    public interface IUpdateGameState
+    {
+        public void Update(float deltaTime);
+    }
 }

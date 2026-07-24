@@ -23,5 +23,10 @@ namespace Core
             _currentState = nextState;
             _currentState.Enter(this);
         }
+
+        public void OnUpdate(float deltaTime)
+        {
+            (_currentState as IUpdateGameState)?.Update(deltaTime);
+        }
     }
 }

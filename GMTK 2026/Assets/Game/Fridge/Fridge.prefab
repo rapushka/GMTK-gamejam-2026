@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4deaa537615d456aa8987b7e39db1d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Core.Shelf
-  _collider: {fileID: 6334976154056398206}
+  _collider: {fileID: 3112255486224995576}
 --- !u!61 &3112255486224995576
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4deaa537615d456aa8987b7e39db1d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Core.Shelf
-  _collider: {fileID: 6334976154056398206}
+  _collider: {fileID: 2883194069502364542}
 --- !u!61 &2883194069502364542
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -531,7 +531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4deaa537615d456aa8987b7e39db1d9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Core.Shelf
-  _collider: {fileID: 6334976154056398206}
+  _collider: {fileID: 4303861554470618226}
 --- !u!61 &4303861554470618226
 BoxCollider2D:
   m_ObjectHideFlags: 0

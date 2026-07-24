@@ -12,12 +12,12 @@ namespace Core
 
         public Vector2 CreateRandomPoint()
         {
-            var localPoint = new Vector2
+            var point = new Vector2
             {
                 x = Random.Range(Bounds.min.x, Bounds.max.x),
                 y = Bounds.max.y,
             };
-            return localPoint + WorldPosition;
+            return point;
         }
     }
 }

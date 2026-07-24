@@ -7,6 +7,7 @@ namespace Core
     {
         [SerializeField] private AssetsProvider _assetsProvider;
         [SerializeField] private Camera _mainCamera;
+        [SerializeField] private UiRoot _uiRoot;
 
         private Game _game;
 
@@ -17,6 +18,7 @@ namespace Core
             ServiceLocator.Set(new InputSystem());
             ServiceLocator.Set(new ScreensMediator());
             ServiceLocator.Set(new ItemSpawnSystem());
+            ServiceLocator.Set(_uiRoot);
 
             _game = new();
         }

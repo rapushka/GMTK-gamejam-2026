@@ -39,9 +39,27 @@ namespace Core
             var isDroppedInFridge = fridge.IsInBounds(_lasMousePosition);
 
             if (isDroppedInFridge)
+            {
                 DropOnClosestShelf();
-            else
-                ReturnToStart();
+                return;
+            }
+
+            var trashBin = ScreensMediator.GameScreen.TrashBin;
+            var isDroppedInTrash = trashBin.IsInBounds(_lasMousePosition);
+
+            if (isDroppedInTrash)
+            {
+                DropInTrash();
+                return;
+            }
+
+            ReturnToStart();
+        }
+
+        private void DropInTrash()
+        {
+            Destroy(gameObject);
+            // TODO: health controller
         }
 
         private void ReturnToStart()

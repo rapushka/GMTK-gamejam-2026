@@ -28,10 +28,8 @@ namespace Core
         {
             _currentTickLeftS -= Time.deltaTime;
 
-            // Debug.Log($"_currentTickLeftS = {_currentTickLeftS}");
             if (_currentTickLeftS > 0f)
                 return;
-            // Debug.Log("tick");
 
             ResetTimer();
 

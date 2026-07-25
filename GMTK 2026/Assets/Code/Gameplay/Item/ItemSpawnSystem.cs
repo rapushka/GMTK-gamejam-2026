@@ -9,7 +9,7 @@ namespace Core
 
         public void SpawnStartItems()
         {
-            var config = AssetsProvider.Items.GetTmp();
+            var config = AssetsProvider.Items.GetRandom();
             var itemPrefab = config.ItemPrefab2D;
             var gameScreen = ScreensMediator.GameScreen;
 

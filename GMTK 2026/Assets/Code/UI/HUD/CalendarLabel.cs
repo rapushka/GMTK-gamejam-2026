@@ -14,14 +14,14 @@ namespace Core
 
         private void Start()
         {
-            _cashedHours = CalendarSystem.CurrentDate.Hour;
+            _cashedHours = CalendarSystem.CurrentDateTime.Hour;
             UpdateView();
         }
 
         private void Update()
         {
             var oldHours = _cashedHours;
-            _cashedHours = CalendarSystem.CurrentDate.Hour;
+            _cashedHours = CalendarSystem.CurrentDateTime.Hour;
 
             if (oldHours != _cashedHours)
                 UpdateView();
@@ -29,7 +29,7 @@ namespace Core
 
         private void UpdateView()
         {
-            var dateString = ExpiryDateUtils.ToLongString(CalendarSystem.CurrentDate);
+            var dateString = ExpiryDateUtils.ToLongString(CalendarSystem.CurrentDateTime);
             _clockText.SetText(dateString);
         }
     }

@@ -12,8 +12,8 @@ namespace Core
             ScreensMediator.OpenGameplayScreen();
             UiMediator.OpenGameplayUI();
 
+            CalendarSystem.Init();
             ItemSpawnSystem.SpawnStartItems();
-            CalendarSystem.OnGameStart();
 
             stateMachine.Enter<GameplayGameState>();
         }

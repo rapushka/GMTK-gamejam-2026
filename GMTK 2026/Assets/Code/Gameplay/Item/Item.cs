@@ -34,7 +34,9 @@ namespace Core
             Key = config.Key;
             _daysToLive = Random.Range(config.MinDaysToLive, config.MaxDaysToLive);
 
-            ExpiresOnDate = CalendarSystem.CurrentDate.AddDays(_daysToLive);
+            Debug.Log($"CalendarSystem.CurrentDateTime = {CalendarSystem.CurrentDateTime}");
+            Debug.Log($"ExpiresOnDate = {ExpiresOnDate}");
+            ExpiresOnDate = CalendarSystem.CurrentDateTime.AddDays(_daysToLive);
         }
 
         public void StartDrag(Vector2 mouseWorld)

@@ -11,11 +11,11 @@ namespace Core
         private DateTime _currentDateTime;
         private float _currentTickLeftS;
 
-        public DateTime CurrentDate => _currentDateTime;
+        public DateTime CurrentDateTime => _currentDateTime;
 
         public int CurrentDay => _currentDay;
 
-        public void OnGameStart()
+        public void Init()
         {
             // Game starts at Today's Day 12:00
             _currentDateTime = DateTime.Today.AddHours(12);
@@ -24,7 +24,7 @@ namespace Core
             ResetTimer();
         }
 
-        public bool IsSpoiled(Item item) => item.ExpiresOnDate.Date < CurrentDate.Date;
+        public bool IsSpoiled(Item item) => item.ExpiresOnDate.Date < CurrentDateTime.Date;
 
         public void OnUpdate()
         {

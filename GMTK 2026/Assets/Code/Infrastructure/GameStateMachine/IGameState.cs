@@ -9,4 +9,9 @@ namespace Core
     {
         public void Update(float deltaTime);
     }
+    
+    public interface IExitGameState
+    {
+        public void Exit();
+    }
 }

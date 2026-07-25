@@ -8,8 +8,7 @@
         {
             UiMediator.Initialize();
             ScreensMediator.Initialize();
-            
-            stateMachine.Enter<StartGameState>();
+            stateMachine.Enter<MainMenuGameState>();
         }
     }
 }

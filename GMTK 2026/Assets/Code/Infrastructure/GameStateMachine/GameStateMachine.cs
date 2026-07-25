@@ -18,6 +18,8 @@ namespace Core
         public void Enter<TState>()
             where TState : IGameState
         {
+            (_currentState as IExitGameState)?.Exit();
+            
             var nextState = _states[typeof(TState)];
 
             _currentState = nextState;

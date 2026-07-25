@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Core.ItemConfig
   <Key>k__BackingField: 4
   <ItemPrefab2D>k__BackingField: {fileID: 2127651770100132692, guid: 1d0ee4ff0dc9fdc40a1f7ecd3b738ab1, type: 3}
-  <ItemPrefab3D>k__BackingField: {fileID: 8004614637647825824, guid: f48586e0459b0a351873186370197a2c, type: 3}
+  <ItemPrefab3D>k__BackingField: {fileID: 8004614637647825824, guid: 5df56f2e50b672e409d5c890c147796a, type: 3}
   <MinDaysToLive>k__BackingField: 1
   <MaxDaysToLive>k__BackingField: 5

@@ -23,15 +23,16 @@ namespace Core
         public async UniTask PlayArrive(PersonComponent person)
         {
             await Fridge.DoorPivot.transform.DORotate(_targetRotation, 0.5f)
-                    .From(_initRotation)
+                    // .From(_initRotation)
                     .SetEase(Ease.OutCubic)
                     .Play()
                     .ToUniTask()
                 ;
 
-            await UniTask.WaitForSeconds(1f);
+            await UniTask.WaitForSeconds(0.4f);
 
             await person.Appear();
+            Debug.Log("ended");
         }
     }
 }

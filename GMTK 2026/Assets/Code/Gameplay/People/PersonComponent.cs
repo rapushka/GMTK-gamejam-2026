@@ -11,12 +11,11 @@ namespace Core
 
         public async UniTask Appear()
         {
-            // var animation = GetComponent<Animation>();
-            // animation.Play();
-            // animation.Play("PersonAppear");
-            _appearAnimation.Play();
             gameObject.SetActive(true);
+            _appearAnimation.Play("PersonAppear");
             await UniTask.WaitUntil(() => !_appearAnimation.isPlaying);
+
+            _appearAnimation.Play("PersonIdle");
         }
     }
 }

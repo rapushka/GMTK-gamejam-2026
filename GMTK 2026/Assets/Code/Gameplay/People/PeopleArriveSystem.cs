@@ -23,6 +23,9 @@ namespace Core
 
         public void OnUpdate(float deltaTime)
         {
+            if (!_isWaitingForPerson)
+                return;
+
             _timeLeft -= deltaTime;
 
             if (_timeLeft > 0)

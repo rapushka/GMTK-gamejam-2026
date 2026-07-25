@@ -6,6 +6,7 @@ namespace Core
         private static ItemSpawnSystem ItemSpawnSystem => ServiceLocator.Get<ItemSpawnSystem>();
         private static UIMediator      UiMediator      => ServiceLocator.Get<UIMediator>();
         private static CalendarSystem  CalendarSystem  => ServiceLocator.Get<CalendarSystem>();
+        private static LivesSystem     LivesSystem     => ServiceLocator.Get<LivesSystem>();
 
         public void Enter(GameStateMachine stateMachine)
         {
@@ -14,6 +15,7 @@ namespace Core
 
             CalendarSystem.Init();
             ItemSpawnSystem.SpawnStartItems();
+            LivesSystem.Init();
 
             stateMachine.Enter<GameplayGameState>();
         }

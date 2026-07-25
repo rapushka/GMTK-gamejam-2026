@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Core
 {
@@ -6,19 +7,19 @@ namespace Core
     {
         [SerializeField] private Sprite _normal;
         [SerializeField] private Sprite _lost;
-        [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField] private Image _imageRenderer;
 
         public bool IsFull { get; private set; }
 
         public void Init()
         {
-            _spriteRenderer.sprite = _normal;
+            _imageRenderer.sprite = _normal;
             IsFull = true;
         }
 
         public void Loose()
         {
-            _spriteRenderer.sprite = _lost;
+            _imageRenderer.sprite = _lost;
             IsFull = false;
         }
     }

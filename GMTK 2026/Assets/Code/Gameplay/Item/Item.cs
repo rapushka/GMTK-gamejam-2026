@@ -1,5 +1,7 @@
+using System;
 using DefaultNamespace;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Core
 {
@@ -8,10 +10,14 @@ namespace Core
         [SerializeField] private Collider2D _collider;
 
         private static ScreensMediator ScreensMediator => ServiceLocator.Get<ScreensMediator>();
+        private static CalendarSystem  CalendarSystem  => ServiceLocator.Get<CalendarSystem>();
 
         private Vector2 _grabOffset;
         private Vector2 _startPosition;
         private Vector2 _lasMousePosition;
+
+        private int _daysToLive;
+        public DateTime ExpiresOnDate { get; private set; }
 
         public ItemKey Key { get; private set; }
 
@@ -23,9 +29,12 @@ namespace Core
             set => transform.position = value.WithZ(SortingZ.Item);
         }
 
-        public void Init(ItemKey key)
+        public void Init(ItemConfig config)
         {
-            Key = key;
+            Key = config.Key;
+            _daysToLive = Random.Range(config.MinDaysToLive, config.MaxDaysToLive);
+
+            ExpiresOnDate = CalendarSystem.CurrentDate.AddDays(_daysToLive);
         }
 
         public void StartDrag(Vector2 mouseWorld)
@@ -65,7 +74,14 @@ namespace Core
 
         private void DropInTrash()
         {
+            var wasSpoiled = CalendarSystem.IsSpoiled(this);
+
             Destroy(gameObject);
+
+            if (!wasSpoiled)
+            {
+                Debug.Log("TODO: MISTAKE! THROWN AWAY GOOD FOOD!");
+            }
             // TODO: health controller
         }
 

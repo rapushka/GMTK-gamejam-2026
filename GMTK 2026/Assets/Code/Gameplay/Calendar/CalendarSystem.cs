@@ -24,6 +24,8 @@ namespace Core
             ResetTimer();
         }
 
+        public bool IsSpoiled(Item item) => item.ExpiresOnDate.Date < CurrentDate.Date;
+
         public void OnUpdate()
         {
             _currentTickLeftS -= Time.deltaTime;

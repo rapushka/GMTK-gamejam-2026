@@ -5,6 +5,7 @@ namespace Core
     [Serializable]
     public enum ItemKey
     {
-        Placeholder,
+        Unknown = 0,
+        Placeholder = 1,
     }
 }

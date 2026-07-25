@@ -10,7 +10,6 @@ namespace Core
 
         private static CalendarSystem CalendarSystem => ServiceLocator.Get<CalendarSystem>();
 
-        private readonly CultureInfo _english = new("en-US");
         private int _cashedHours;
 
         private void Start()
@@ -30,7 +29,8 @@ namespace Core
 
         private void UpdateView()
         {
-            _clockText.SetText(CalendarSystem.CurrentDate.ToString("HH:00 MMMM dd yyyy", _english));
+            var dateString = ExpiryDateUtils.ToLongString(CalendarSystem.CurrentDate);
+            _clockText.SetText(dateString);
         }
     }
 }

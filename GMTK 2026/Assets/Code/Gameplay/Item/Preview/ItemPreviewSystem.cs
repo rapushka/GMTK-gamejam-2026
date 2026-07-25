@@ -18,6 +18,7 @@ namespace Core
         {
             var config = AssetsProvider.Items.GetItem(item.Key);
             _currentPreview = Object.Instantiate(config.ItemPrefab3D, PreviewContainer.transform);
+            _currentPreview.Init(item);
             IsShowing = true;
         }
 

@@ -1,3 +1,5 @@
+using System.Globalization;
+
 namespace Core
 {
     public static class Constants
@@ -6,5 +8,6 @@ namespace Core
         public const float DoubleClickThreshold = 0.3f;
 
         public const float PreviewRotateSensitivity = 0.3f;
+
     }
 }

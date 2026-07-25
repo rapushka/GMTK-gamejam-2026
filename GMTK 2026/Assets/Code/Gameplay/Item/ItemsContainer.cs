@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Core
@@ -9,6 +10,8 @@ namespace Core
         private static LivesSystem    LivesSystem    => ServiceLocator.Get<LivesSystem>();
 
         private readonly List<Item> _items = new();
+
+        public bool HasAnyFood => _items.Any();
 
         public void AddItem(Item item)
         {

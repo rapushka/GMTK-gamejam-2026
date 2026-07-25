@@ -10,6 +10,9 @@ namespace Core
         {
             await UniTask.WaitForSeconds(0.3f);
 
+            if (!ItemsContainer.HasAnyFood)
+                return;
+
             // TODO: Eat more than 1 item?
             var randomItem = ItemsContainer.PickRandom();
             ItemsContainer.Eat(randomItem);

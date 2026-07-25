@@ -34,8 +34,6 @@ namespace Core
             Key = config.Key;
             _daysToLive = Random.Range(config.MinDaysToLive, config.MaxDaysToLive);
 
-            Debug.Log($"CalendarSystem.CurrentDateTime = {CalendarSystem.CurrentDateTime}");
-            Debug.Log($"ExpiresOnDate = {ExpiresOnDate}");
             ExpiresOnDate = CalendarSystem.CurrentDateTime.AddDays(_daysToLive);
         }
 
@@ -76,7 +74,7 @@ namespace Core
 
         private void DropInTrash()
         {
-            var wasSpoiled = CalendarSystem.IsSpoiled(this);
+            var wasSpoiled = CalendarSystem.IsCorrectToThrowAway(this);
 
             Destroy(gameObject);
 

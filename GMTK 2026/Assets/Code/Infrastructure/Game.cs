@@ -7,6 +7,7 @@ namespace Core
         private static InputSystem InputSystem => ServiceLocator.Get<InputSystem>();
 
         private readonly GameStateMachine _stateMachine = new(
+            new BootstrapGameState(),
             new StartGameState(),
             new GameplayGameState()
         );
@@ -14,7 +15,7 @@ namespace Core
         public void OnGameLoaded()
         {
             // TODO: Main Menu and stuff
-            _stateMachine.Enter<StartGameState>();
+            _stateMachine.Enter<BootstrapGameState>();
         }
 
         public void OnUpdate()

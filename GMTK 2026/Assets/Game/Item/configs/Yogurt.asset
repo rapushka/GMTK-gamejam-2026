@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 097ea248818c48639180beeb6868fe86, type: 3}
+  m_Name: Yogurt
+  m_EditorClassIdentifier: Assembly-CSharp::Core.ItemConfig
+  <Key>k__BackingField: 4
+  <ItemPrefab2D>k__BackingField: {fileID: 2127651770100132692, guid: 1d0ee4ff0dc9fdc40a1f7ecd3b738ab1, type: 3}
+  <ItemPrefab3D>k__BackingField: {fileID: 8004614637647825824, guid: f48586e0459b0a351873186370197a2c, type: 3}
+  <MinDaysToLive>k__BackingField: 1
+  <MaxDaysToLive>k__BackingField: 5

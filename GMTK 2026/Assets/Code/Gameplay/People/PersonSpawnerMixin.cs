@@ -19,6 +19,7 @@ namespace Core
             {
                 var person = Object.Instantiate(prefab, container);
                 person.Init();
+                person.gameObject.SetActive(false);
 
                 _people.Add(person);
             }

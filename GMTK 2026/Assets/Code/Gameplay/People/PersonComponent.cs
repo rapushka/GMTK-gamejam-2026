@@ -17,5 +17,12 @@ namespace Core
 
             _appearAnimation.Play("PersonIdle");
         }
+
+        public async UniTask Hide()
+        {
+            _appearAnimation.Play("PersonDisappear");
+            await UniTask.WaitUntil(() => !_appearAnimation.isPlaying);
+            gameObject.SetActive(false);
+        }
     }
 }

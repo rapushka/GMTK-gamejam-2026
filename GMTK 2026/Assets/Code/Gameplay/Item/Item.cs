@@ -11,7 +11,7 @@ namespace Core
 
         private static ScreensMediator ScreensMediator => ServiceLocator.Get<ScreensMediator>();
         private static CalendarSystem  CalendarSystem  => ServiceLocator.Get<CalendarSystem>();
-        private static LivesSystem     LivesSystem     => ServiceLocator.Get<LivesSystem>();
+        private static ItemsContainer  ItemsContainer  => ServiceLocator.Get<ItemsContainer>();
 
         private Vector2 _grabOffset;
         private Vector2 _startPosition;
@@ -66,20 +66,11 @@ namespace Core
 
             if (isDroppedInTrash)
             {
-                DropInTrash();
+                ItemsContainer.ThrowInTrash(this);
                 return;
             }
 
             ReturnToStart();
-        }
-
-        private void DropInTrash()
-        {
-            var wasSpoiled = CalendarSystem.IsCorrectToThrowAway(this);
-            Destroy(gameObject);
-
-            if (!wasSpoiled)
-                LivesSystem.LooseALife();
         }
 
         private void ReturnToStart()

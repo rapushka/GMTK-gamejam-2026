@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 namespace Core
@@ -10,12 +11,14 @@ namespace Core
         private bool _isWaitingForPerson = false;
         private PersonArriveAnimationMixin _animationMixin;
         private PersonSpawnerMixin _spawnerMixin;
+        private PersonEatItemsMixin _eatItemsMixin;
 
         public void OnGameStart()
         {
             ResetTimer();
-            _animationMixin = new(this);
+            _animationMixin = new();
             _spawnerMixin = new();
+            _eatItemsMixin = new();
             _isWaitingForPerson = true;
 
             _spawnerMixin.Init();
@@ -34,10 +37,19 @@ namespace Core
             var person = _spawnerMixin.PickRandom();
 
             _isWaitingForPerson = false;
-            _animationMixin.PlayArrive(person);
+            ArrivePerson(person).Forget();
         }
 
-        public void OnPersonLeft()
+        private async UniTask ArrivePerson(PersonComponent person)
+        {
+            await _animationMixin.PlayArrive(person);
+            await _eatItemsMixin.EatItems();
+            await _animationMixin.PlayHide(person);
+
+            OnPersonLeft();
+        }
+
+        private void OnPersonLeft()
         {
             ResetTimer();
             _isWaitingForPerson = true;

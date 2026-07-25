@@ -6,6 +6,7 @@ namespace Core
     {
         private static AssetsProvider  AssetsProvider  => ServiceLocator.Get<AssetsProvider>();
         private static ScreensMediator ScreensMediator => ServiceLocator.Get<ScreensMediator>();
+        private static ItemsContainer  ItemsContainer  => ServiceLocator.Get<ItemsContainer>();
 
         public void SpawnStartItems()
         {
@@ -24,6 +25,8 @@ namespace Core
                     item.Init(config);
                     var pointOnShelf = shelf.CreateRandomPoint();
                     item.WorldPosition = shelf.ClampItem(pointOnShelf, item.Bounds);
+
+                    ItemsContainer.AddItem(item);
                 }
             }
         }

@@ -10,8 +10,6 @@ namespace Core
 
         private Bounds Bounds => _collider.bounds;
 
-        private Vector2 WorldPosition => transform.position;
-
         public Vector2 CreateRandomPoint()
         {
             var point = new Vector2

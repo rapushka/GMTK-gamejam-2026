@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097ea248818c48639180beeb6868fe86, type: 3}
   m_Name: EnergyDrink
   m_EditorClassIdentifier: Assembly-CSharp::Core.ItemConfig
-  <Key>k__BackingField: 1
+  <Key>k__BackingField: 3
   <ItemPrefab2D>k__BackingField: {fileID: 2127651770100132692, guid: 47459e20723954a45ad5817862a1ef1a, type: 3}
   <ItemPrefab3D>k__BackingField: {fileID: 8004614637647825824, guid: f48586e0459b0a351873186370197a2c, type: 3}
   <MinDaysToLive>k__BackingField: 1

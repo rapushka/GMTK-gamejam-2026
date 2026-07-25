@@ -6,6 +6,9 @@ namespace Core
     public enum ItemKey
     {
         Unknown = 0,
-        Placeholder = 1,
+        Cola = 1,
+        MeetBeen = 2,
+        EnergyDrink = 3,
+        Yogurt = 4
     }
 }

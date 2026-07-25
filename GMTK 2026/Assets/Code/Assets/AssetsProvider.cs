@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 namespace Core
 {
@@ -12,5 +11,7 @@ namespace Core
 
         [field: SerializeField] public ItemsCollection Items { get; private set; }
         [field: SerializeField] public MainMenu MainMenuPrefab { get; private set; }
+
+        [field: SerializeField] public PersonComponent[] PersonPrefabs { get; private set; }
     }
 }

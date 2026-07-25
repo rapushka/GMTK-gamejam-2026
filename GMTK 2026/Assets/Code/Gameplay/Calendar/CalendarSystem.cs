@@ -25,8 +25,8 @@ namespace Core
         }
 
         // Intentionally allow both throw away and eat on the last day of Expiry
-        public bool IsCorrectToThrowAway(Item item) => item.ExpiresOnDate.Date <= CurrentDateTime.Date;
-        public bool IsCorrectToEat(Item item)       => item.ExpiresOnDate.Date >= CurrentDateTime.Date;
+        public bool IsGoodToThrowAway(Item item) => item.ExpiresOnDate.Date <= CurrentDateTime.Date;
+        public bool IsGoodToEat(Item item)       => item.ExpiresOnDate.Date >= CurrentDateTime.Date;
 
         public void OnUpdate()
         {

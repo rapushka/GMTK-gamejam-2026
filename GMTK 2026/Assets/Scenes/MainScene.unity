@@ -577,7 +577,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: -2
-      type: {class: '', ns: '', asm: ''}
+      type: {class: , ns: , asm: }
     - rid: 2973946394690978038
       type: {class: Light2DProviderSources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
       data:
@@ -655,6 +655,7 @@ MonoBehaviour:
       - {fileID: 11400000, guid: a25954cc896802e4eb08216690510d4a, type: 2}
       - {fileID: 11400000, guid: 5685ecb1975956a4bba5e1fd0205e26f, type: 2}
     <MainMenuPrefab>k__BackingField: {fileID: 7660880933040266500, guid: e2fe985320fefd44e94072db5e2669ef, type: 3}
+    <LosePopup>k__BackingField: {fileID: -3641624310432638022, guid: 013a66c67af56de4c93ea77be6a625a1, type: 3}
     <PersonPrefabs>k__BackingField:
     - {fileID: 6931329742874134060, guid: b63cdf7d0d7366d0eb3fcdd3e2499dba, type: 3}
   _mainCamera: {fileID: 519420031}

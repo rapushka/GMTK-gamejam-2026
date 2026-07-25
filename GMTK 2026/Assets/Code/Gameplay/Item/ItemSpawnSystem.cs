@@ -10,6 +10,8 @@ namespace Core
 
         public void SpawnStartItems()
         {
+            ItemsContainer.DestroyAllItems();
+            
             var gameScreen = ScreensMediator.GameScreen;
 
             var shelves = gameScreen.Fridge.Shelves;

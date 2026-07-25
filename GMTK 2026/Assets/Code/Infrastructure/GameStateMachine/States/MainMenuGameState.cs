@@ -1,4 +1,6 @@
-﻿namespace Core
+﻿using UnityEngine;
+
+namespace Core
 {
     public class MainMenuGameState : IGameState, IExitGameState
     {
@@ -9,7 +11,9 @@
         public void Enter(GameStateMachine stateMachine)
         {
             _stateMachine = stateMachine;
+            UiMediator.MainMenu.Initialize();
             UiMediator.MainMenu.OnPlayButtonPressed += OnPlayButtonPressed;
+            UiMediator.MainMenu.OnExitButtonPressed += OnExitButtonPressed;
             UiMediator.OpenMainMenu();
         }
 
@@ -18,9 +22,16 @@
             _stateMachine.Enter<StartGameState>();
         }
 
+        private void OnExitButtonPressed()
+        {
+            Debug.Log("Game Exit");
+            Application.Quit();
+        }
+
         public void Exit()
         {
             UiMediator.MainMenu.OnPlayButtonPressed -= OnPlayButtonPressed;
+            UiMediator.MainMenu.OnExitButtonPressed -= OnExitButtonPressed;
             UiMediator.CloseMainMenu();
         }
     }

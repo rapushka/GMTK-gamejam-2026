@@ -11,6 +11,7 @@ namespace Core
 
         private static ScreensMediator ScreensMediator => ServiceLocator.Get<ScreensMediator>();
         private static CalendarSystem  CalendarSystem  => ServiceLocator.Get<CalendarSystem>();
+        private static LivesSystem     LivesSystem     => ServiceLocator.Get<LivesSystem>();
 
         private Vector2 _grabOffset;
         private Vector2 _startPosition;
@@ -75,14 +76,10 @@ namespace Core
         private void DropInTrash()
         {
             var wasSpoiled = CalendarSystem.IsCorrectToThrowAway(this);
-
             Destroy(gameObject);
 
             if (!wasSpoiled)
-            {
-                Debug.Log("TODO: MISTAKE! THROWN AWAY GOOD FOOD!");
-            }
-            // TODO: health controller
+                LivesSystem.LooseALife();
         }
 
         private void ReturnToStart()

@@ -4,18 +4,30 @@ namespace Core
 {
     public class PreviewInputMixin
     {
-        private static ItemPreviewSystem ItemPreview => ServiceLocator.Get<ItemPreviewSystem>();
+        private static ItemPreviewSystem ItemPreview  => ServiceLocator.Get<ItemPreviewSystem>();
+        private static CameraSystem      CameraSystem => ServiceLocator.Get<CameraSystem>();
 
         public void HandleInput(Mouse mouse)
         {
+            var mouseScreenPoint = mouse.position.ReadValue();
+
             if (mouse.leftButton.wasPressedThisFrame)
-                ItemPreview.StartRotate(mouse.position.ReadValue());
+            {
+                if (CameraSystem.IsPointerOnPreview(mouseScreenPoint))
+                    ItemPreview.StartRotate(mouseScreenPoint);
+                else
+                    ItemPreview.Hide();
 
-            else if (mouse.leftButton.isPressed)
-                ItemPreview.Rotate(mouse.position.ReadValue());
+                return;
+            }
 
-            else
-                ItemPreview.EndRotate();
+            if (mouse.leftButton.isPressed)
+            {
+                ItemPreview.Rotate(mouseScreenPoint);
+                return;
+            }
+
+            ItemPreview.EndRotate();
         }
     }
 }

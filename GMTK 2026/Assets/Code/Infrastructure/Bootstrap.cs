@@ -6,6 +6,7 @@ namespace Core
     {
         [SerializeField] private AssetsProvider _assetsProvider;
         [SerializeField] private Camera _mainCamera;
+        [SerializeField] private Camera _previewCamera;
         [SerializeField] private UiRoot _uiRoot;
         [SerializeField] private BalanceConfig _balanceConfig;
         [SerializeField] private ItemPreviewContainer _previewContainer;
@@ -15,7 +16,7 @@ namespace Core
         private void Awake()
         {
             ServiceLocator.Set(_assetsProvider);
-            ServiceLocator.Set(new CameraSystem(_mainCamera));
+            ServiceLocator.Set(new CameraSystem(_mainCamera, _previewCamera));
             ServiceLocator.Set(new InputSystem());
             ServiceLocator.Set(new ScreensMediator());
             ServiceLocator.Set(new ItemSpawnSystem());

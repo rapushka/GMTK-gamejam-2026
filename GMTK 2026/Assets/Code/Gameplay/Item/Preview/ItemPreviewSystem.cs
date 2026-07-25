@@ -48,6 +48,7 @@ namespace Core
         public void Hide()
         {
             IsShowing = false;
+            EndRotate();
             if (_currentPreview == null)
                 return;
 

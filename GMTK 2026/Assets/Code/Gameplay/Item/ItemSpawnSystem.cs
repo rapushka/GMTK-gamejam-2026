@@ -9,8 +9,6 @@ namespace Core
 
         public void SpawnStartItems()
         {
-            var config = AssetsProvider.Items.GetRandom();
-            var itemPrefab = config.ItemPrefab2D;
             var gameScreen = ScreensMediator.GameScreen;
 
             var shelves = gameScreen.Fridge.Shelves;
@@ -19,6 +17,9 @@ namespace Core
                 var itemsPerShelf = Random.Range(1, 3);
                 for (var i = 0; i < itemsPerShelf; i++)
                 {
+                    var config = AssetsProvider.Items.GetRandom();
+                    var itemPrefab = config.ItemPrefab2D;
+
                     var item = Object.Instantiate(itemPrefab);
                     item.Init(config);
                     var pointOnShelf = shelf.CreateRandomPoint();

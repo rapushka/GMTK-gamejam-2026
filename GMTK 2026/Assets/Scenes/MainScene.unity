@@ -650,7 +650,10 @@ MonoBehaviour:
     <GameplayHUDPrefab>k__BackingField: {fileID: 3544040344921176913, guid: 139a4f738711a68458329d568dc3ed7f, type: 3}
     <Items>k__BackingField:
       _itemConfigs:
-      - {fileID: 11400000, guid: 3497d6a5cf001eeed9a74be9311efcdd, type: 2}
+      - {fileID: 11400000, guid: 5806bfc0495cb634c8896cb2798fa014, type: 2}
+      - {fileID: 11400000, guid: f875d97d23feeab44952d4f92de64875, type: 2}
+      - {fileID: 11400000, guid: a25954cc896802e4eb08216690510d4a, type: 2}
+      - {fileID: 11400000, guid: 5685ecb1975956a4bba5e1fd0205e26f, type: 2}
   _mainCamera: {fileID: 519420031}
   _previewCamera: {fileID: 1803265386}
   _uiRoot: {fileID: 190714908}

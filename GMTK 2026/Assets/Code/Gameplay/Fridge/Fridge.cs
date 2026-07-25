@@ -7,8 +7,13 @@ namespace Core
     {
         [SerializeField] private Shelf[] _shelves;
         [SerializeField] private Collider2D _collider;
+        [SerializeField] private GameObject _doorPivot;
+
+        [field: SerializeField] public GameObject PeopleContainer { get; private set; }
 
         public Shelf[] Shelves => _shelves;
+
+        public GameObject DoorPivot => _doorPivot;
 
         public bool IsInBounds(Vector2 worldPoint)
         {

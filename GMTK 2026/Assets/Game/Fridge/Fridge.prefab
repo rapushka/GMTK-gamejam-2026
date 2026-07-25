@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &215960434397987120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 35474463707810758}
+  m_Layer: 0
+  m_Name: layout - open door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &35474463707810758
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 215960434397987120}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.19530992, y: -0.47458816, z: 0.108879626, w: 0.8513315}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2536226181773929526}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &631384151799533289
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,7 +63,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 35474463707810758}
+  - {fileID: 7311733146905029206}
   - {fileID: 6335653561982864728}
+  - {fileID: 1434199746077577169}
   - {fileID: 3703990713400351389}
   - {fileID: 7880796460823603283}
   m_Father: {fileID: 0}
@@ -55,6 +89,8 @@ MonoBehaviour:
   - {fileID: 5085627356539992496}
   - {fileID: 141030642221648101}
   _collider: {fileID: 3999773096498432905}
+  _doorPivot: {fileID: 2552836166052288676}
+  <PeopleContainer>k__BackingField: {fileID: 7727515306348426218}
 --- !u!61 &3999773096498432905
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -435,6 +471,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6335653561982864728}
+  - component: {fileID: 444855062082306500}
   m_Layer: 0
   m_Name: door pivot
   m_TagString: Untagged
@@ -450,14 +487,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2552836166052288676}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.22358236, y: -0.015040561, z: 0.0034505224, w: 0.9745629}
+  m_LocalRotation: {x: -0.22359136, y: -0.014993008, z: 0.0034913768, w: 0.9745614}
   m_LocalPosition: {x: -2.67, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 316035381625602981}
   m_Father: {fileID: 2536226181773929526}
-  m_LocalEulerAnglesHint: {x: -25.829, y: -1.965, z: 0.856}
+  m_LocalEulerAnglesHint: {x: 334.17, y: 358.04, z: 0.86}
+--- !u!210 &444855062082306500
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2552836166052288676}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -100
+  m_SortAtRoot: 0
+  m_Sort3DAs2D: 0
 --- !u!1 &2579470326036500091
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +538,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2221757802869508791}
+  m_Father: {fileID: 2536226181773929526}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2782310347050828374
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7311733146905029206}
+  m_Layer: 0
+  m_Name: layout - closed door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &7311733146905029206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2782310347050828374}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.22359134, y: -0.014992963, z: 0.003491388, w: 0.9745614}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
   m_Father: {fileID: 2536226181773929526}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4372264833815259857
@@ -859,6 +940,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
   m_BlendShapeWeights: []
+--- !u!1 &7727515306348426218
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1434199746077577169}
+  - component: {fileID: 2490915624305149985}
+  m_Layer: 0
+  m_Name: People Container
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1434199746077577169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7727515306348426218}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2536226181773929526}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &2490915624305149985
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7727515306348426218}
+  m_Enabled: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -10
+  m_SortAtRoot: 0
+  m_Sort3DAs2D: 0
 --- !u!1 &8405781585622301447
 GameObject:
   m_ObjectHideFlags: 0

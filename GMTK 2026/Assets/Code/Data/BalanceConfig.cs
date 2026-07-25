@@ -9,5 +9,8 @@ namespace Core
         [field: SerializeField] public float HourTickIntervalS { get; private set; } = 1f;
 
         [field: SerializeField] public int LifesCount { get; private set; } = 3;
+
+        [field: SerializeField] public float PeopleArriveMinS { get; private set; } = 5f;
+        [field: SerializeField] public float PeopleArriveMaxS { get; private set; } = 15f;
     }
 }

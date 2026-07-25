@@ -8,9 +8,15 @@ namespace Core
 
         public GameScreen GameScreen { get; private set; }
 
-        public void OpenGameplayScreen()
+        public void Initialize()
         {
             GameScreen = Object.Instantiate(AssetsProvider.GameScreenPrefab);
+            GameScreen.gameObject.SetActive(false);
+        }
+
+        public void OpenGameplayScreen()
+        {
+            GameScreen.gameObject.SetActive(true);
         }
     }
 }

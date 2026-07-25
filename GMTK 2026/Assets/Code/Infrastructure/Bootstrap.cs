@@ -8,6 +8,7 @@ namespace Core
         [SerializeField] private Camera _mainCamera;
         [SerializeField] private UiRoot _uiRoot;
         [SerializeField] private BalanceConfig _balanceConfig;
+        [SerializeField] private ItemPreviewContainer _previewContainer;
 
         private Game _game;
 
@@ -22,6 +23,8 @@ namespace Core
             ServiceLocator.Set(_uiRoot);
             ServiceLocator.Set(new CalendarSystem());
             ServiceLocator.Set(_balanceConfig);
+            ServiceLocator.Set(new ItemPreviewSystem());
+            ServiceLocator.Set(_previewContainer);
 
             _game = new();
         }

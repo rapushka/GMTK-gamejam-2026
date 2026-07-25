@@ -9,7 +9,8 @@ namespace Core
 
         public void SpawnStartItems()
         {
-            var itemPrefab = AssetsProvider.PlaceholderItemPrefab;
+            var config = AssetsProvider.Items.GetTmp();
+            var itemPrefab = config.ItemPrefab2D;
             var gameScreen = ScreensMediator.GameScreen;
 
             var shelves = gameScreen.Fridge.Shelves;
@@ -19,6 +20,7 @@ namespace Core
                 for (var i = 0; i < itemsPerShelf; i++)
                 {
                     var item = Object.Instantiate(itemPrefab);
+                    item.Init(config.Key);
                     var pointOnShelf = shelf.CreateRandomPoint();
                     item.WorldPosition = shelf.ClampItem(pointOnShelf, item.Bounds);
                 }

@@ -5,7 +5,8 @@ namespace Core
 {
     public class InputSystem : IService
     {
-        private static CameraSystem CameraSystem => ServiceLocator.Get<CameraSystem>();
+        private static CameraSystem      CameraSystem      => ServiceLocator.Get<CameraSystem>();
+        private static ItemPreviewSystem ItemPreviewSystem => ServiceLocator.Get<ItemPreviewSystem>();
 
         private Item _draggedItem;
         private Item _lastClickedItem;
@@ -49,7 +50,7 @@ namespace Core
 
         private void OnItemDoubleClicked()
         {
-            UnityEngine.Debug.Log("DOUBLE CLICK");
+            ItemPreviewSystem.Show(_lastClickedItem);
         }
 
         private void Drag()

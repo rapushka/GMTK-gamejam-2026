@@ -13,12 +13,19 @@ namespace Core
         private Vector2 _startPosition;
         private Vector2 _lasMousePosition;
 
+        public ItemKey Key { get; private set; }
+
         public Bounds Bounds => _collider.bounds;
 
         public Vector2 WorldPosition
         {
             get => transform.position;
             set => transform.position = value.WithZ(SortingZ.Item);
+        }
+
+        public void Init(ItemKey key)
+        {
+            Key = key;
         }
 
         public void StartDrag(Vector2 mouseWorld)

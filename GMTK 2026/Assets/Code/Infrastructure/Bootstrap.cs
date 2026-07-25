@@ -26,6 +26,7 @@ namespace Core
             ServiceLocator.Set(_balanceConfig);
             ServiceLocator.Set(new ItemPreviewSystem());
             ServiceLocator.Set(_previewContainer);
+            ServiceLocator.Set(new LivesSystem());
 
             _game = new();
         }

@@ -27,6 +27,7 @@ namespace Core
             ServiceLocator.Set(new ItemPreviewSystem());
             ServiceLocator.Set(_previewContainer);
             ServiceLocator.Set(new LivesSystem());
+            ServiceLocator.Set(new PeopleArriveSystem());
 
             _game = new();
         }

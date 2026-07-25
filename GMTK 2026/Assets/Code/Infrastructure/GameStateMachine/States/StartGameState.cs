@@ -2,11 +2,12 @@ namespace Core
 {
     public class StartGameState : IGameState
     {
-        private static ScreensMediator ScreensMediator => ServiceLocator.Get<ScreensMediator>();
-        private static ItemSpawnSystem ItemSpawnSystem => ServiceLocator.Get<ItemSpawnSystem>();
-        private static UIMediator      UiMediator      => ServiceLocator.Get<UIMediator>();
-        private static CalendarSystem  CalendarSystem  => ServiceLocator.Get<CalendarSystem>();
-        private static LivesSystem     LivesSystem     => ServiceLocator.Get<LivesSystem>();
+        private static ScreensMediator    ScreensMediator    => ServiceLocator.Get<ScreensMediator>();
+        private static ItemSpawnSystem    ItemSpawnSystem    => ServiceLocator.Get<ItemSpawnSystem>();
+        private static UIMediator         UiMediator         => ServiceLocator.Get<UIMediator>();
+        private static CalendarSystem     CalendarSystem     => ServiceLocator.Get<CalendarSystem>();
+        private static LivesSystem        LivesSystem        => ServiceLocator.Get<LivesSystem>();
+        private static PeopleArriveSystem PeopleArriveSystem => ServiceLocator.Get<PeopleArriveSystem>();
 
         public void Enter(GameStateMachine stateMachine)
         {
@@ -16,6 +17,7 @@ namespace Core
             CalendarSystem.Init();
             ItemSpawnSystem.SpawnStartItems();
             LivesSystem.Init();
+            PeopleArriveSystem.OnGameStart();
 
             stateMachine.Enter<GameplayGameState>();
         }

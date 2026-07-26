@@ -577,7 +577,7 @@ MonoBehaviour:
     version: 2
     RefIds:
     - rid: -2
-      type: {class: '', ns: '', asm: ''}
+      type: {class: , ns: , asm: }
     - rid: 2973946394690978038
       type: {class: Light2DProviderSources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
       data:
@@ -657,6 +657,7 @@ MonoBehaviour:
     <MainMenuPrefab>k__BackingField: {fileID: 7660880933040266500, guid: e2fe985320fefd44e94072db5e2669ef, type: 3}
     <PersonPrefabs>k__BackingField:
     - {fileID: 6931329742874134060, guid: b63cdf7d0d7366d0eb3fcdd3e2499dba, type: 3}
+    <HandWithGroceriesPrefab>k__BackingField: {fileID: 6931329742874134060, guid: c5296224ca076edee88103d26a9a364c, type: 3}
   _mainCamera: {fileID: 519420031}
   _previewCamera: {fileID: 1803265386}
   _uiRoot: {fileID: 190714908}
@@ -665,6 +666,7 @@ MonoBehaviour:
     <LifesCount>k__BackingField: 3
     <PeopleArriveMinS>k__BackingField: 5
     <PeopleArriveMaxS>k__BackingField: 15
+    <MinFoodToBuyNewBatch>k__BackingField: 3
   _previewContainer: {fileID: 1815808618}
 --- !u!1 &1753680933
 GameObject:

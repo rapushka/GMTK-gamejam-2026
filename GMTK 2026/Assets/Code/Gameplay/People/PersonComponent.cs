@@ -7,7 +7,10 @@ namespace Core
     {
         [SerializeField] private Animation _appearAnimation;
 
-        public void Init() { }
+        public void Init()
+        {
+            gameObject.SetActive(false);
+        }
 
         public async UniTask Appear()
         {

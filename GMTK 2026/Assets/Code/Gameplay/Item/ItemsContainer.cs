@@ -8,10 +8,13 @@ namespace Core
     {
         private static CalendarSystem CalendarSystem => ServiceLocator.Get<CalendarSystem>();
         private static LivesSystem    LivesSystem    => ServiceLocator.Get<LivesSystem>();
+        private static BalanceConfig  BalanceConfig  => ServiceLocator.Get<BalanceConfig>();
 
         private readonly List<Item> _items = new();
 
         public bool HasAnyFood => _items.Any();
+
+        public bool NeedsNewFood => _items.Count <= BalanceConfig.MinFoodToBuyNewBatch;
 
         public void AddItem(Item item)
         {

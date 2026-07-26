@@ -9,7 +9,7 @@ namespace Core
         private static ScreensMediator ScreensMediator => ServiceLocator.Get<ScreensMediator>();
 
         private readonly List<PersonComponent> _people = new();
-        public PersonComponent HandWithGroceries { get; private set; }
+        public HandWithBagComponent HandWithGroceries { get; private set; }
 
         public void Init()
         {

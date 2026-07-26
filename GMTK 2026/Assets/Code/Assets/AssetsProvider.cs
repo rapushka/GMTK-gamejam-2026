@@ -12,7 +12,7 @@ namespace Core
         [field: SerializeField] public ItemsCollection Items          { get; private set; }
         [field: SerializeField] public MainMenu        MainMenuPrefab { get; private set; }
 
-        [field: SerializeField] public PersonComponent[] PersonPrefabs           { get; private set; }
-        [field: SerializeField] public PersonComponent   HandWithGroceriesPrefab { get; private set; }
+        [field: SerializeField] public PersonComponent[]    PersonPrefabs           { get; private set; }
+        [field: SerializeField] public HandWithBagComponent HandWithGroceriesPrefab { get; private set; }
     }
 }

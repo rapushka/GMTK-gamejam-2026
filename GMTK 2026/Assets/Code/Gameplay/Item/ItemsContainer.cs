@@ -14,7 +14,7 @@ namespace Core
 
         public bool HasAnyFood => _items.Any();
 
-        public bool NeedsNewFood => _items.Count <= BalanceConfig.MinFoodToBuyNewBatch;
+        public bool NeedsNewFood => _items.Count <= BalanceConfig.MinFoodInFridgeToBuyNewBatch;
 
         public void AddItem(Item item)
         {

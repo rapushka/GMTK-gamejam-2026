@@ -18,6 +18,27 @@ namespace Core
             return _mainCamera.ScreenToWorldPoint(screenPoint);
         }
 
+        public Vector3 WorldToScreen(Vector3 worldPoint)
+        {
+            return _mainCamera.WorldToScreenPoint(worldPoint);
+        }
+
+        public Vector3 ScreenToPreviewWorld(Vector2 screenPoint, float worldZ)
+        {
+            var ray = _previewCamera.ScreenPointToRay(screenPoint);
+            var plane = new Plane(Vector3.forward, new Vector3(0f, 0f, worldZ));
+            plane.Raycast(ray, out var enter);
+            return ray.GetPoint(enter);
+        }
+
+        public float GetScreenHeight(Bounds worldBounds, bool usePreviewCamera)
+        {
+            var cam = usePreviewCamera ? _previewCamera : _mainCamera;
+            var top = cam.WorldToScreenPoint(worldBounds.center + Vector3.up * worldBounds.extents.y);
+            var bottom = cam.WorldToScreenPoint(worldBounds.center - Vector3.up * worldBounds.extents.y);
+            return Mathf.Abs(top.y - bottom.y);
+        }
+
         public bool IsPointerOnPreview(Vector2 screenPoint)
         {
             var ray = _previewCamera.ScreenPointToRay(screenPoint);

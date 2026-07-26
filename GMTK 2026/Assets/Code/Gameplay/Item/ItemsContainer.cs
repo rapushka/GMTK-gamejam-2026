@@ -6,9 +6,10 @@ namespace Core
 {
     public class ItemsContainer : IService
     {
-        private static CalendarSystem CalendarSystem => ServiceLocator.Get<CalendarSystem>();
-        private static LivesSystem    LivesSystem    => ServiceLocator.Get<LivesSystem>();
-        private static BalanceConfig  BalanceConfig  => ServiceLocator.Get<BalanceConfig>();
+        private static CalendarSystem    CalendarSystem    => ServiceLocator.Get<CalendarSystem>();
+        private static LivesSystem       LivesSystem       => ServiceLocator.Get<LivesSystem>();
+        private static BalanceConfig     BalanceConfig     => ServiceLocator.Get<BalanceConfig>();
+        private static ItemPreviewSystem ItemPreviewSystem => ServiceLocator.Get<ItemPreviewSystem>();
 
         private readonly List<Item> _items = new();
 
@@ -23,6 +24,8 @@ namespace Core
 
         public void Eat(Item item)
         {
+            ItemPreviewSystem.HideInstantIfPreviewing(item);
+
             var wasSpoiled = !CalendarSystem.IsGoodToEat(item);
             Object.Destroy(item.gameObject);
             // TODO: vfx+sfx?
@@ -52,14 +55,14 @@ namespace Core
 
         public void DestroyAllItems()
         {
-            if(_items.Count == 0)
+            if (_items.Count == 0)
                 return;
 
             foreach (var item in _items)
             {
                 Object.Destroy(item.gameObject);
             }
-            
+
             _items.Clear();
         }
     }

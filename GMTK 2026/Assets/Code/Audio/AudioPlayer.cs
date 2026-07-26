@@ -31,6 +31,7 @@ namespace Core
 
             _musicMixin = new(_mainMenuMusic, _gameplayMusic);
             _sfxPool.Init();
+            _soundsCollection.Init();
         }
 
         public void PlayMusicMainMenu() => _musicMixin.PlayMainMenu();

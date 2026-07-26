@@ -12,6 +12,7 @@ namespace Core
         private static ScreensMediator ScreensMediator => ServiceLocator.Get<ScreensMediator>();
         private static CalendarSystem  CalendarSystem  => ServiceLocator.Get<CalendarSystem>();
         private static ItemsContainer  ItemsContainer  => ServiceLocator.Get<ItemsContainer>();
+        private static AudioPlayer     AudioPlayer     => ServiceLocator.Get<AudioPlayer>();
 
         private Vector2 _grabOffset;
         private Vector2 _startPosition;
@@ -23,8 +24,7 @@ namespace Core
         public ItemKey Key { get; private set; }
 
         public Bounds Bounds => _collider.bounds;
-        
-        private AudioPlayer _audioPlayer = new AudioPlayer();
+
         public Vector2 WorldPosition
         {
             get => transform.position;
@@ -58,21 +58,8 @@ namespace Core
 
             if (isDroppedInFridge)
             {
-                switch (Key)
-                {
-                    case ItemKey.Cola:
-                        _audioPlayer.PlaySound(SoundKey.DropEnergyDrink);
-                        break;
-                    case ItemKey.EnergyDrink:
-                        _audioPlayer.PlaySound("DropEnergyDrink");
-                        break;
-                    case ItemKey.MeetBeen:
-                        _audioPlayer.PlaySound(SoundKey.DropMeenBeens);
-                        break;
-                    case ItemKey.Yogurt:
-                        _audioPlayer.PlaySound(SoundKey.DropMilk);
-                        break;
-                }
+                PlayDropSound();
+
                 DropOnClosestShelf();
                 return;
             }
@@ -87,6 +74,26 @@ namespace Core
             }
 
             ReturnToStart();
+        }
+
+        private void PlayDropSound()
+        {
+            switch (Key)
+            {
+                case ItemKey.Cola:
+                case ItemKey.EnergyDrink:
+                    AudioPlayer.PlaySound(SoundKey.DropEnergyDrink);
+                    break;
+                case ItemKey.MeetBeen:
+                    AudioPlayer.PlaySound(SoundKey.DropMeenBeens);
+                    break;
+                case ItemKey.Yogurt:
+                    AudioPlayer.PlaySound(SoundKey.DropMilk);
+                    break;
+                case ItemKey.Unknown:
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
 
         private void ReturnToStart()

@@ -6,6 +6,7 @@ namespace Core
     public class PersonComponent : MonoBehaviour
     {
         [SerializeField] private Animation _animations;
+        [field: SerializeField] public Transform BubblePivot { get; private set; }
 
         public void Init()
         {

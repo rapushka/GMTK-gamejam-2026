@@ -533,6 +533,7 @@ MonoBehaviour:
     <PersonPrefabs>k__BackingField:
     - {fileID: 6931329742874134060, guid: b63cdf7d0d7366d0eb3fcdd3e2499dba, type: 3}
     <HandWithGroceriesPrefab>k__BackingField: {fileID: 6931329742874134060, guid: c5296224ca076edee88103d26a9a364c, type: 3}
+    <BubblePrefab>k__BackingField: {fileID: 7271525297873319382, guid: 75989fb1b42a41b9e8e9ed5a5cd0a075, type: 3}
   _mainCamera: {fileID: 519420031}
   _previewCamera: {fileID: 1803265386}
   _uiRoot: {fileID: 190714908}

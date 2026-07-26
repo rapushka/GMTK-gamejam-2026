@@ -1,23 +1,38 @@
 using Cysharp.Threading.Tasks;
+using UnityEngine;
 
 namespace Core
 {
     public class PersonEatItemsMixin
     {
         private static ItemsContainer ItemsContainer => ServiceLocator.Get<ItemsContainer>();
+        private static AssetsProvider AssetsProvider => ServiceLocator.Get<AssetsProvider>();
 
-        public async UniTask EatItems()
+        public async UniTask EatItems(PersonComponent person)
         {
-            await UniTask.WaitForSeconds(0.3f);
-
             if (!ItemsContainer.HasAnyFood)
                 return;
 
-            // TODO: Eat more than 1 item?
-            var randomItem = ItemsContainer.PickRandom();
-            ItemsContainer.Eat(randomItem);
+            var thoughtKey = ItemsContainer.PickRandomUniqueKey();
+            var itemSprite = GetItemSprite(thoughtKey);
 
-            await UniTask.WaitForSeconds(0.2f);
+            var bubble = Object.Instantiate(AssetsProvider.BubblePrefab);
+            bubble.transform.position = person.BubblePivot.position;
+            bubble.transform.rotation = Quaternion.identity;
+
+            await bubble.Appear(itemSprite);
+
+            var item = ItemsContainer.FindByKey(thoughtKey);
+            if (item != null)
+                ItemsContainer.Eat(item);
+
+            await bubble.Disappear();
+        }
+
+        private static Sprite GetItemSprite(ItemKey key)
+        {
+            var config = AssetsProvider.Items.GetItem(key);
+            return config.ItemPrefab2D.GetComponentInChildren<SpriteRenderer>().sprite;
         }
     }
 }

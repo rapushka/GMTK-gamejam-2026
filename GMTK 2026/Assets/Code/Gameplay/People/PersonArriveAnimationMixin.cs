@@ -33,6 +33,7 @@ namespace Core
 
         public async UniTask PlayHide(PersonComponent person)
         {
+            AudioPlayer.PlaySound(SoundKey.CloseFridge);
             await person.Hide();
 
             // Fridge.DoorPivot.transform.eulerAngles = _targetRotation;

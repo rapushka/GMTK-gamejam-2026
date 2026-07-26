@@ -10,6 +10,7 @@ namespace Core
         [SerializeField] private UiRoot _uiRoot;
         [SerializeField] private BalanceConfig _balanceConfig;
         [SerializeField] private ItemPreviewContainer _previewContainer;
+        [SerializeField] private AudioPlayer _audioPlayer;
 
         private Game _game;
 
@@ -29,6 +30,7 @@ namespace Core
             ServiceLocator.Set(new LivesSystem());
             ServiceLocator.Set(new PeopleArriveSystem());
             ServiceLocator.Set(new ItemsContainer());
+            ServiceLocator.Set(_audioPlayer);
 
             _game = new();
         }

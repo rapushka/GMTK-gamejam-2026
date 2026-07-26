@@ -16,6 +16,12 @@ namespace Core
             Max = max;
         }
 
+        public FloatRange(float value)
+        {
+            Min = value;
+            Max = value;
+        }
+
         public float GetRandom(bool exclusive = true)
         {
             if (Min >= Max)

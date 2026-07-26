@@ -2,8 +2,9 @@
 {
     public class LoseGameState : IGameState, IExitGameState
     {
-        private static UIMediator      UiMediator      => ServiceLocator.Get<UIMediator>();
+        private static UIMediator UiMediator => ServiceLocator.Get<UIMediator>();
         private GameStateMachine _stateMachine;
+
         public void Enter(GameStateMachine stateMachine)
         {
             _stateMachine = stateMachine;

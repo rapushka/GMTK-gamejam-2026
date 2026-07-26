@@ -6,14 +6,17 @@ namespace Core
         private static LivesSystem        LivesSystem        => ServiceLocator.Get<LivesSystem>();
         private static PeopleArriveSystem PeopleArriveSystem => ServiceLocator.Get<PeopleArriveSystem>();
         private static UIMediator         UIMediator         => ServiceLocator.Get<UIMediator>();
-        
+        private static AudioPlayer        AudioPlayer        => ServiceLocator.Get<AudioPlayer>();
+
         private GameStateMachine _stateMachine;
         private bool _isPaused;
 
         public void Enter(GameStateMachine stateMachine)
         {
             _stateMachine = stateMachine;
+
             UIMediator.GameplayHUD.OnTutorialButtonClicked += TutorialButtonClicked;
+            AudioPlayer.PlayMusicGameplay();
         }
 
         public void Update(float deltaTime)

@@ -65,10 +65,16 @@ namespace Core
         {
             _lasMousePosition = mouseWorld;
             WorldPosition = _lasMousePosition + _grabOffset;
+
+            var trashBin = ScreensMediator.GameScreen.TrashBin;
+            trashBin.SetOpen(trashBin.IsInBounds(mouseWorld));
         }
 
         public void EndDrag()
         {
+            var trashBin = ScreensMediator.GameScreen.TrashBin;
+            trashBin.SetOpen(false);
+
             var fridge = ScreensMediator.GameScreen.Fridge;
             var isDroppedInFridge = fridge.IsInBounds(_lasMousePosition);
 
@@ -80,7 +86,6 @@ namespace Core
                 return;
             }
 
-            var trashBin = ScreensMediator.GameScreen.TrashBin;
             var isDroppedInTrash = trashBin.IsInBounds(_lasMousePosition);
 
             if (isDroppedInTrash)

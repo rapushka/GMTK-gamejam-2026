@@ -5,7 +5,7 @@ namespace Core
     public class Game
     {
         private static InputSystem InputSystem => ServiceLocator.Get<InputSystem>();
-        private static UIMediator UIMediator => ServiceLocator.Get<UIMediator>();
+        private static UIMediator  UIMediator  => ServiceLocator.Get<UIMediator>();
 
         private readonly GameStateMachine _stateMachine = new(
             new BootstrapGameState(),

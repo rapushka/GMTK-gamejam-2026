@@ -9,6 +9,7 @@ namespace Core
         private static ScreensMediator ScreensMediator => ServiceLocator.Get<ScreensMediator>();
 
         private readonly List<PersonComponent> _people = new();
+        public HandWithBagComponent HandWithGroceries { get; private set; }
 
         public void Init()
         {
@@ -19,10 +20,12 @@ namespace Core
             {
                 var person = Object.Instantiate(prefab, container);
                 person.Init();
-                person.gameObject.SetActive(false);
 
                 _people.Add(person);
             }
+
+            HandWithGroceries = Object.Instantiate(AssetsProvider.HandWithGroceriesPrefab, container);
+            HandWithGroceries.Init();
         }
 
         public PersonComponent PickRandom()

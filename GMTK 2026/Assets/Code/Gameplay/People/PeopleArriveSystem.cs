@@ -5,28 +5,28 @@ namespace Core
 {
     public class PeopleArriveSystem : IService
     {
-        private static BalanceConfig BalanceConfig => ServiceLocator.Get<BalanceConfig>();
+        private static BalanceConfig  BalanceConfig  => ServiceLocator.Get<BalanceConfig>();
+        private static ItemsContainer ItemsContainer => ServiceLocator.Get<ItemsContainer>();
 
         private float _timeLeft;
-        private bool _isWaitingForPerson = false;
-        private PersonArriveAnimationMixin _animationMixin;
-        private PersonSpawnerMixin _spawnerMixin;
-        private PersonEatItemsMixin _eatItemsMixin;
+        private bool _isFridgeOccupied = false;
+        private readonly PersonArriveAnimationMixin _animationMixin = new();
+        private readonly PersonSpawnerMixin _spawnerMixin = new();
+        private readonly PersonEatItemsMixin _eatItemsMixin = new();
+        private readonly BringNewGroceriesMixin _newGroceriesMixin = new();
 
         public void OnGameStart()
         {
             ResetTimer();
-            _animationMixin = new();
-            _spawnerMixin = new();
-            _eatItemsMixin = new();
-            _isWaitingForPerson = true;
+
+            _isFridgeOccupied = false;
 
             _spawnerMixin.Init();
         }
 
         public void OnUpdate(float deltaTime)
         {
-            if (!_isWaitingForPerson)
+            if (_isFridgeOccupied)
                 return;
 
             _timeLeft -= deltaTime;
@@ -34,13 +34,29 @@ namespace Core
             if (_timeLeft > 0)
                 return;
 
-            var person = _spawnerMixin.PickRandom();
+            _isFridgeOccupied = true;
 
-            _isWaitingForPerson = false;
-            ArrivePerson(person).Forget();
+            if (ItemsContainer.NeedsNewFood)
+            {
+                BringNewFood().Forget();
+            }
+            else
+            {
+                var person = _spawnerMixin.PickRandom();
+                ArrivePersonToEat(person).Forget();
+            }
         }
 
-        private async UniTask ArrivePerson(PersonComponent person)
+        private async UniTask BringNewFood()
+        {
+            await _animationMixin.PlayArrive(_spawnerMixin.HandWithGroceries);
+            await _newGroceriesMixin.UnpackNewFood(_spawnerMixin.HandWithGroceries);
+            await _animationMixin.PlayHide(_spawnerMixin.HandWithGroceries);
+
+            OnPersonLeft();
+        }
+
+        private async UniTask ArrivePersonToEat(PersonComponent person)
         {
             await _animationMixin.PlayArrive(person);
             await _eatItemsMixin.EatItems();
@@ -52,12 +68,12 @@ namespace Core
         private void OnPersonLeft()
         {
             ResetTimer();
-            _isWaitingForPerson = true;
+            _isFridgeOccupied = false;
         }
 
         private void ResetTimer()
         {
-            _timeLeft = Random.Range(BalanceConfig.PeopleArriveMinS, BalanceConfig.PeopleArriveMaxS);
+            _timeLeft = BalanceConfig.PeopleArriveS.GetRandom();
         }
     }
 }

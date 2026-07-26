@@ -41,5 +41,13 @@ namespace Core
 
             return target;
         }
+
+        public Vector3 CreateRandomPosition(Item item)
+        {
+            var shelf = _shelves.PickRandom();
+
+            var pointOnShelf = shelf.CreateRandomPoint();
+            return shelf.ClampItem(pointOnShelf, item.Bounds);
+        }
     }
 }

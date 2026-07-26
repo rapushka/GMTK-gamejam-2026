@@ -5,23 +5,26 @@ namespace Core
 {
     public class PersonComponent : MonoBehaviour
     {
-        [SerializeField] private Animation _appearAnimation;
+        [SerializeField] private Animation _animations;
 
-        public void Init() { }
+        public void Init()
+        {
+            gameObject.SetActive(false);
+        }
 
         public async UniTask Appear()
         {
             gameObject.SetActive(true);
-            _appearAnimation.Play("PersonAppear");
-            await UniTask.WaitUntil(() => !_appearAnimation.isPlaying);
+            _animations.Play("PersonAppear");
+            await UniTask.WaitUntil(() => !_animations.isPlaying);
 
-            _appearAnimation.Play("PersonIdle");
+            _animations.Play("PersonIdle");
         }
 
         public async UniTask Hide()
         {
-            _appearAnimation.Play("PersonDisappear");
-            await UniTask.WaitUntil(() => !_appearAnimation.isPlaying);
+            _animations.Play("PersonDisappear");
+            await UniTask.WaitUntil(() => !_animations.isPlaying);
             gameObject.SetActive(false);
         }
     }

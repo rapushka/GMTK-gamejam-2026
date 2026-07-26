@@ -48,7 +48,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
-  Mute: 1
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -276,6 +276,12 @@ MonoBehaviour:
       <Clip>k__BackingField: {fileID: 8300000, guid: e31c77043228b66e3bae587f66ff6781, type: 3}
     - <Key>k__BackingField: GroceriesBag_3
       <Clip>k__BackingField: {fileID: 8300000, guid: 763b6f6e00f463c5784ec348926be1b2, type: 3}
+    - <Key>k__BackingField: Pop
+      <Clip>k__BackingField: {fileID: 8300000, guid: bd69efe745a66d04f931546f10b8dcc5, type: 3}
+    - <Key>k__BackingField: Krok1
+      <Clip>k__BackingField: {fileID: 8300000, guid: 6cf3b25ddec66a547913c602a828ca48, type: 3}
+    - <Key>k__BackingField: Krok2
+      <Clip>k__BackingField: {fileID: 8300000, guid: 742a1878bd166f24eb3779630eac80ea, type: 3}
   _sfxPool: {fileID: 5461642715635609079}
   _audioMixer: {fileID: 24300002, guid: f442458b01dc668e3a3415c56d050ea1, type: 2}
 --- !u!1 &7489302459228587355
@@ -321,12 +327,12 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -2209324346376863904, guid: f442458b01dc668e3a3415c56d050ea1, type: 2}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: a032a985c9029677f91e2829cf30c163, type: 3}
+  m_Resource: {fileID: 8300000, guid: b045f8b89c40eef44a65cdad22b3fe8a, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
-  Mute: 1
+  Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128

@@ -937,50 +937,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1487451141383443085, guid: da2e4e55e89208abab3b22069369a05b, type: 3}
-      propertyPath: _soundsCollection._clips.Array.size
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 1487451141383443085, guid: da2e4e55e89208abab3b22069369a05b, type: 3}
-      propertyPath: _soundsCollection._clips.Array.data[10].<Key>k__BackingField
-      value: Pop
-      objectReference: {fileID: 0}
-    - target: {fileID: 1487451141383443085, guid: da2e4e55e89208abab3b22069369a05b, type: 3}
-      propertyPath: _soundsCollection._clips.Array.data[11].<Key>k__BackingField
-      value: Krok1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1487451141383443085, guid: da2e4e55e89208abab3b22069369a05b, type: 3}
-      propertyPath: _soundsCollection._clips.Array.data[12].<Key>k__BackingField
-      value: Krok2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1487451141383443085, guid: da2e4e55e89208abab3b22069369a05b, type: 3}
-      propertyPath: _soundsCollection._clips.Array.data[13].<Key>k__BackingField
-      value: Pop
-      objectReference: {fileID: 0}
-    - target: {fileID: 1487451141383443085, guid: da2e4e55e89208abab3b22069369a05b, type: 3}
-      propertyPath: _soundsCollection._clips.Array.data[10].<Clip>k__BackingField
-      value: 
-      objectReference: {fileID: 8300000, guid: bd69efe745a66d04f931546f10b8dcc5, type: 3}
-    - target: {fileID: 1487451141383443085, guid: da2e4e55e89208abab3b22069369a05b, type: 3}
-      propertyPath: _soundsCollection._clips.Array.data[11].<Clip>k__BackingField
-      value: 
-      objectReference: {fileID: 8300000, guid: 6cf3b25ddec66a547913c602a828ca48, type: 3}
-    - target: {fileID: 1487451141383443085, guid: da2e4e55e89208abab3b22069369a05b, type: 3}
-      propertyPath: _soundsCollection._clips.Array.data[12].<Clip>k__BackingField
-      value: 
-      objectReference: {fileID: 8300000, guid: 742a1878bd166f24eb3779630eac80ea, type: 3}
-    - target: {fileID: 1487451141383443085, guid: da2e4e55e89208abab3b22069369a05b, type: 3}
-      propertyPath: _soundsCollection._clips.Array.data[13].<Clip>k__BackingField
-      value: 
-      objectReference: {fileID: 8300000, guid: bd69efe745a66d04f931546f10b8dcc5, type: 3}
-    - target: {fileID: 2948800081186924592, guid: da2e4e55e89208abab3b22069369a05b, type: 3}
-      propertyPath: Mute
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2948800081186924592, guid: da2e4e55e89208abab3b22069369a05b, type: 3}
-      propertyPath: m_Resource
-      value: 
-      objectReference: {fileID: 8300000, guid: b045f8b89c40eef44a65cdad22b3fe8a, type: 3}
     - target: {fileID: 6313833400592756891, guid: da2e4e55e89208abab3b22069369a05b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.03185

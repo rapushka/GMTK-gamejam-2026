@@ -292,8 +292,10 @@ MonoBehaviour:
       <Clip>k__BackingField: {fileID: 8300000, guid: de8bfe58cbc104b4bb5a080b0420bab3, type: 3}
     - <Key>k__BackingField: DragEnergyDrink
       <Clip>k__BackingField: {fileID: 8300000, guid: 29b7eae783555ec47b4b3c44c5b23fb5, type: 3}
-    - <Key>k__BackingField: Click
-      <Clip>k__BackingField: {fileID: 8300000, guid: 645e1b7e656ecf7489933f193e670f25, type: 3}
+    - <Key>k__BackingField: Fail
+      <Clip>k__BackingField: {fileID: 8300000, guid: b0265804f69b182498a6219604473c07, type: 3}
+    - <Key>k__BackingField: Trash
+      <Clip>k__BackingField: {fileID: 8300000, guid: 290fc31e73c29c74cacea2db8ef8d9b4, type: 3}
   _sfxPool: {fileID: 5461642715635609079}
   _audioMixer: {fileID: 24300002, guid: f442458b01dc668e3a3415c56d050ea1, type: 2}
 --- !u!1 &7489302459228587355

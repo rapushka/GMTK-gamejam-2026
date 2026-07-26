@@ -22,6 +22,7 @@ namespace Core
         public const string DragMilk = "DragMilk";
         public const string DragMeetBeens = "DragMeetBeens";
         public const string DragEnergyDrink = "DragEnergyDrink";
-        public const string Click = "Click";
+        public const string Fail = "Fail";
+        public const string Trash =  "Trash";
     }
 }

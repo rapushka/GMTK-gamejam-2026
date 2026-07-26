@@ -85,6 +85,7 @@ namespace Core
 
             if (isDroppedInTrash)
             {
+                AudioPlayer.PlaySound(SoundKey.Trash);
                 ItemsContainer.ThrowInTrash(this);
                 return;
             }

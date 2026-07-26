@@ -11,6 +11,7 @@ namespace Core
         
         public event Action OnRestartButtonClicked;
         public event Action OnMenuButtonClicked;
+        private static AudioPlayer     AudioPlayer     => ServiceLocator.Get<AudioPlayer>();
 
         private void Awake()
         {
@@ -25,6 +26,7 @@ namespace Core
 
         public void Show()
         {
+            AudioPlayer.PlaySound(SoundKey.Fail);
             gameObject.SetActive(true);
         }
 

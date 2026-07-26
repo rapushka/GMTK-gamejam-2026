@@ -145,9 +145,9 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631384151799533289}
   m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingLayerID: -1534433783
+  m_SortingLayer: 5
+  m_SortingOrder: 0
   m_SortAtRoot: 0
   m_Sort3DAs2D: 0
 --- !u!1 &1350216125968194299
@@ -343,8 +343,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7880796460823603283}
+  - component: {fileID: 8242034873331512780}
   m_Layer: 0
-  m_Name: Colliders
+  m_Name: shelves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -369,6 +370,19 @@ Transform:
   - {fileID: 2652133918537604988}
   m_Father: {fileID: 2536226181773929526}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &8242034873331512780
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896389740483675884}
+  m_Enabled: 1
+  m_SortingLayerID: -1534433783
+  m_SortingLayer: 5
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
+  m_Sort3DAs2D: 0
 --- !u!1 &2054932883224439390
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,10 +517,10 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2552836166052288676}
   m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -100
-  m_SortAtRoot: 0
+  m_SortingLayerID: -1777975239
+  m_SortingLayer: 2
+  m_SortingOrder: 0
+  m_SortAtRoot: 1
   m_Sort3DAs2D: 0
 --- !u!1 &2579470326036500091
 GameObject:
@@ -517,6 +531,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3703990713400351389}
+  - component: {fileID: 8506007835125237800}
   m_Layer: 0
   m_Name: View
   m_TagString: Untagged
@@ -540,6 +555,19 @@ Transform:
   - {fileID: 2221757802869508791}
   m_Father: {fileID: 2536226181773929526}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &8506007835125237800
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2579470326036500091}
+  m_Enabled: 1
+  m_SortingLayerID: -1534433783
+  m_SortingLayer: 5
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
+  m_Sort3DAs2D: 0
 --- !u!1 &2782310347050828374
 GameObject:
   m_ObjectHideFlags: 0
@@ -980,10 +1008,10 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7727515306348426218}
   m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -10
-  m_SortAtRoot: 0
+  m_SortingLayerID: -195150575
+  m_SortingLayer: 3
+  m_SortingOrder: 0
+  m_SortAtRoot: 1
   m_Sort3DAs2D: 0
 --- !u!1 &8405781585622301447
 GameObject:

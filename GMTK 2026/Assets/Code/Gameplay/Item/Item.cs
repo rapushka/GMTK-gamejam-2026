@@ -23,7 +23,8 @@ namespace Core
         public ItemKey Key { get; private set; }
 
         public Bounds Bounds => _collider.bounds;
-
+        
+        private AudioPlayer _audioPlayer = new AudioPlayer();
         public Vector2 WorldPosition
         {
             get => transform.position;
@@ -57,6 +58,21 @@ namespace Core
 
             if (isDroppedInFridge)
             {
+                switch (Key)
+                {
+                    case ItemKey.Cola:
+                        _audioPlayer.PlaySound(SoundKey.DropEnergyDrink);
+                        break;
+                    case ItemKey.EnergyDrink:
+                        _audioPlayer.PlaySound("DropEnergyDrink");
+                        break;
+                    case ItemKey.MeetBeen:
+                        _audioPlayer.PlaySound(SoundKey.DropMeenBeens);
+                        break;
+                    case ItemKey.Yogurt:
+                        _audioPlayer.PlaySound(SoundKey.DropMilk);
+                        break;
+                }
                 DropOnClosestShelf();
                 return;
             }

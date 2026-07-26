@@ -17,6 +17,8 @@ namespace Core
 
         public void Init()
         {
+            ClearLives();
+            
             for (var i = 0; i < Balance.LifesCount; i++)
             {
                 var live = Instantiate(_singleLifeUIPrefab, _container);
@@ -30,6 +32,19 @@ namespace Core
         {
             var life = _lives.First(l => l.IsFull);
             life.Loose();
+        }
+
+        private void ClearLives()
+        {
+            if(_lives.Count == 0)
+                return;
+
+            foreach (var life in _lives)
+            {
+                Destroy(life.gameObject);
+            }
+            
+            _lives.Clear();
         }
     }
 }

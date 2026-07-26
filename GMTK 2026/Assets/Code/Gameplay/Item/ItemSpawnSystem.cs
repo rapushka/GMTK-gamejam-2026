@@ -11,6 +11,8 @@ namespace Core
 
         public void SpawnStartItems()
         {
+            ItemsContainer.DestroyAllItems();
+
             var fridge = ScreensMediator.GameScreen.Fridge;
             var foodCount = BalanceConfig.FoodInFridgeOnStart.GetRandom();
 

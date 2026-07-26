@@ -16,4 +16,4 @@ MonoBehaviour:
   <ItemPrefab2D>k__BackingField: {fileID: 2127651770100132692, guid: 47459e20723954a45ad5817862a1ef1a, type: 3}
   <ItemPrefab3D>k__BackingField: {fileID: 8004614637647825824, guid: 801cf825e74fdd84d9f2d5f1c50c4c83, type: 3}
   <MinDaysToLive>k__BackingField: 1
-  <MaxDaysToLive>k__BackingField: 5
+  <MaxDaysToLive>k__BackingField: 7

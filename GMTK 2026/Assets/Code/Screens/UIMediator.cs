@@ -9,6 +9,7 @@ namespace Core
 
         public GameplayHUD GameplayHUD { get; private set; }
         public MainMenu MainMenu { get; private set; }
+        public LosePopup LosePopup { get; private set; }
 
         public void Initialize()
         {
@@ -17,6 +18,9 @@ namespace Core
             
             MainMenu = Object.Instantiate(AssetsProvider.MainMenuPrefab, UiRoot.Transform);
             MainMenu.gameObject.SetActive(false);
+            
+            LosePopup = Object.Instantiate(AssetsProvider.LosePopup, UiRoot.Transform);
+            LosePopup.gameObject.SetActive(false);
         }
         
         public void OpenGameplayUI()

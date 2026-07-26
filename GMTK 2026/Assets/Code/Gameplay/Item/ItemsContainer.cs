@@ -49,5 +49,18 @@ namespace Core
             var randomIndex = Random.Range(0, _items.Count);
             return _items[randomIndex];
         }
+
+        public void DestroyAllItems()
+        {
+            if(_items.Count == 0)
+                return;
+
+            foreach (var item in _items)
+            {
+                Object.Destroy(item.gameObject);
+            }
+            
+            _items.Clear();
+        }
     }
 }

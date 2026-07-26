@@ -41,6 +41,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 990101523
+    locked: 0
+  - name: FridgeDoor
+    uniqueID: 2516992057
+    locked: 0
+  - name: People
+    uniqueID: 4099816721
+    locked: 0
+  - name: AmbientWalls
+    uniqueID: 3617149793
+    locked: 0
+  - name: Fridge
+    uniqueID: 2760533513
+    locked: 0
+  - name: Food
+    uniqueID: 4159945795
+    locked: 0
   m_RenderingLayers:
   - Default
   - Light Layer 1

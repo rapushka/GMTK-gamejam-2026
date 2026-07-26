@@ -7,7 +7,8 @@ namespace Core
     {
         private static BalanceConfig  BalanceConfig  => ServiceLocator.Get<BalanceConfig>();
         private static ItemsContainer ItemsContainer => ServiceLocator.Get<ItemsContainer>();
-
+        private static AudioPlayer     AudioPlayer     => ServiceLocator.Get<AudioPlayer>();
+        
         private float _timeLeft;
         private bool _isFridgeOccupied = false;
         private readonly PersonArriveAnimationMixin _animationMixin = new();
@@ -50,6 +51,7 @@ namespace Core
         private async UniTask BringNewFood()
         {
             await _animationMixin.PlayArrive(_spawnerMixin.HandWithGroceries);
+            AudioPlayer.PlaySound(SoundKey.GroceriesBag_1);
             await _newGroceriesMixin.UnpackNewFood(_spawnerMixin.HandWithGroceries);
             await _animationMixin.PlayHide(_spawnerMixin.HandWithGroceries);
 

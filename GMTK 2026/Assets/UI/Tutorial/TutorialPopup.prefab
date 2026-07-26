@@ -200,6 +200,148 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &2445234116308787055
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6396948365843284345}
+  - component: {fileID: 2888607178019630502}
+  - component: {fileID: 7610977945177830750}
+  m_Layer: 5
+  m_Name: Description (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6396948365843284345
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2445234116308787055}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8675155999162186352}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -47}
+  m_SizeDelta: {x: 450, y: 200}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2888607178019630502
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2445234116308787055}
+  m_CullTransparentMesh: 1
+--- !u!114 &7610977945177830750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2445234116308787055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'There are several known issues:
+
+    1. The Regrigerator may throw away
+    not spoiled food
+
+    2. The Regrigerator may not throw away spoiled food '
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: ea432512adfd2c547a55db0b92590692, type: 2}
+  m_sharedMaterial: {fileID: 3297331778041560989, guid: ea432512adfd2c547a55db0b92590692, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4279900698
+  m_fontColor: {r: 0.1, g: 0.1, b: 0.1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 40
+  m_fontSizeBase: 40
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_characterHorizontalScale: 1
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &3041169632011442263
 GameObject:
   m_ObjectHideFlags: 0
@@ -386,7 +528,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'This SMART model maintains spoiled food food by itself '
+  m_text: 'This SMART model maintains spoiled food by itself. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea432512adfd2c547a55db0b92590692, type: 2}
   m_sharedMaterial: {fileID: 3297331778041560989, guid: ea432512adfd2c547a55db0b92590692, type: 2}
@@ -523,8 +665,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: On next pages you get the detailed information on the operation and features
-    of SMART refrigerators.
+  m_text: On next pages you will get the detailed information on the operation and
+    features of SMART refrigerators.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea432512adfd2c547a55db0b92590692, type: 2}
   m_sharedMaterial: {fileID: 3297331778041560989, guid: ea432512adfd2c547a55db0b92590692, type: 2}
@@ -626,6 +768,8 @@ RectTransform:
   m_Children:
   - {fileID: 7972480889808191800}
   - {fileID: 8325089330336824835}
+  - {fileID: 2996465305114245423}
+  - {fileID: 7161750660945597062}
   m_Father: {fileID: 7769620089320939224}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1505,6 +1649,8 @@ MonoBehaviour:
   _pages:
   - {fileID: 4711175432673880494}
   - {fileID: 6650176839947359893}
+  - {fileID: 456853029360275897}
+  - {fileID: 5521732488455371280}
 --- !u!114 &9193091506702256465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1535,6 +1681,203 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1001 &175493878690794421
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4885053517769601486}
+    m_Modifications:
+    - target: {fileID: 93724877731682434, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 251039917, guid: 480c134ca6a370d4792aa55560e1e51c, type: 3}
+    - target: {fileID: 93724877731682434, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 93724877731682434, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 93724877731682434, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 93724877731682434, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 138533965016646468, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 538831333, guid: 480c134ca6a370d4792aa55560e1e51c, type: 3}
+    - target: {fileID: 138533965016646468, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 138533965016646468, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 138533965016646468, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 138533965016646468, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_text
+      value: '4. If food is spoiled, The Refrigerator will Drag and Drop
+
+        it
+        into the trash can '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1064211401547563995, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Name
+      value: TutorialPage 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1064211401547563995, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527099436340112263, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527099436340112263, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527099436340112263, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527099436340112263, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -108
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_text
+      value: '3. SMART Technology compares the expiration date
+
+        with current
+        date '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720263037726649220, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_text
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327332596685538217, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_text
+      value: How SMART Works
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045481498761696868, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_text
+      value: How SMART Works
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087585203545943706, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_text
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+--- !u!225 &456853029360275897 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 304111345656814092, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+  m_PrefabInstance: {fileID: 175493878690794421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &2996465305114245423 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+  m_PrefabInstance: {fileID: 175493878690794421}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4997059002825749410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1580,6 +1923,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TitlePage
       objectReference: {fileID: 0}
+    - target: {fileID: 1064211401547563995, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1527099436340112263, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_SizeDelta.y
       value: 250
@@ -1602,7 +1949,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_text
-      value: Owner Manual
+      value: User Manual
       objectReference: {fileID: 0}
     - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_fontSize
@@ -1710,7 +2057,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4461204389955473574, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_Name
-      value: OwnerManual
+      value: UserManual
       objectReference: {fileID: 0}
     - target: {fileID: 6605256637459832901, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1815,6 +2162,236 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3529997139402742380, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
   m_PrefabInstance: {fileID: 4997059002825749410}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5231293638609723420
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4885053517769601486}
+    m_Modifications:
+    - target: {fileID: 93724877731682434, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 251039917, guid: 480c134ca6a370d4792aa55560e1e51c, type: 3}
+    - target: {fileID: 93724877731682434, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 93724877731682434, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 93724877731682434, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 93724877731682434, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 138533965016646468, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 435177955, guid: 480c134ca6a370d4792aa55560e1e51c, type: 3}
+    - target: {fileID: 138533965016646468, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 138533965016646468, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 138533965016646468, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 138533965016646468, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 621999443736785105, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -190
+      objectReference: {fileID: 0}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_text
+      value: 'If Your SMART Refrigerator makes many mistakes contact us and we will
+        replace it
+
+        FOR FREE!!!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1064211401547563995, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Name
+      value: TutorialPage 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1064211401547563995, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527099436340112263, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527099436340112263, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527099436340112263, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527099436340112263, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -108
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784247927584150761, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 143
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_text
+      value: The SMART Technology is experimental!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2720263037726649220, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_text
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327332596685538217, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_text
+      value: We Care About Our Buyers
+      objectReference: {fileID: 0}
+    - target: {fileID: 3538058521787389907, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4320353276552893393, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 6605256637459832901, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6605256637459832901, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045481498761696868, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_text
+      value: Warning!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8087585203545943706, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_text
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095183604216963326, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3529997139402742380, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 6396948365843284345}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+--- !u!225 &5521732488455371280 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 304111345656814092, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+  m_PrefabInstance: {fileID: 5231293638609723420}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &7161750660945597062 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+  m_PrefabInstance: {fileID: 5231293638609723420}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &8675155999162186352 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3529997139402742380, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+  m_PrefabInstance: {fileID: 5231293638609723420}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6373234704176237721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1823,13 +2400,63 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4885053517769601486}
     m_Modifications:
+    - target: {fileID: 93724877731682434, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -447458312, guid: 480c134ca6a370d4792aa55560e1e51c, type: 3}
+    - target: {fileID: 93724877731682434, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 93724877731682434, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 93724877731682434, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 93724877731682434, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 138533965016646468, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 578823746, guid: 480c134ca6a370d4792aa55560e1e51c, type: 3}
+    - target: {fileID: 138533965016646468, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 138533965016646468, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 138533965016646468, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 138533965016646468, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_PreserveAspect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_text
+      value: '2. Objects will be rotated
+
+        to find the Expiration Date'
+      objectReference: {fileID: 0}
     - target: {fileID: 1064211401547563995, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_Name
-      value: TutorialPage
+      value: TutorialPage 1
       objectReference: {fileID: 0}
     - target: {fileID: 1064211401547563995, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_text
+      value: "1. SMART refrigerator inspects food by double-clicking \non food objects "
       objectReference: {fileID: 0}
     - target: {fileID: 2720263037726649220, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_text
@@ -1914,6 +2541,14 @@ PrefabInstance:
     - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327332596685538217, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_text
+      value: How SMART Works
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045481498761696868, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_text
+      value: How SMART Works
       objectReference: {fileID: 0}
     - target: {fileID: 8087585203545943706, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_text

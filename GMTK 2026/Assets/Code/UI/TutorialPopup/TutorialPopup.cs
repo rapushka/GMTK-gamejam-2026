@@ -13,6 +13,8 @@ namespace Core
         [SerializeField] private CanvasGroup[] _pages;
         
         private int _currentPage;
+        private bool _isTutorialShownInitial;
+        public bool IsTutorialShownInitial => _isTutorialShownInitial;
         
         public event Action OnCloseButtonClicked;
 
@@ -32,6 +34,7 @@ namespace Core
 
         public void ShowInitial()
         {
+            _isTutorialShownInitial = true;
             foreach (var page in _pages)
             {
                 page.gameObject.SetActive(false);

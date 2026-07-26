@@ -7,6 +7,7 @@ namespace Core
         private static PeopleArriveSystem PeopleArriveSystem => ServiceLocator.Get<PeopleArriveSystem>();
         private static UIMediator         UIMediator         => ServiceLocator.Get<UIMediator>();
         private static AudioPlayer        AudioPlayer        => ServiceLocator.Get<AudioPlayer>();
+        private static InputSystem InputSystem => ServiceLocator.Get<InputSystem>();
 
         private GameStateMachine _stateMachine;
         private bool _isPaused;
@@ -14,9 +15,17 @@ namespace Core
         public void Enter(GameStateMachine stateMachine)
         {
             _stateMachine = stateMachine;
-
+            
             UIMediator.GameplayHUD.OnTutorialButtonClicked += TutorialButtonClicked;
+            UIMediator.TutorialPopup.OnCloseButtonClicked += TutorialCloseButtonClicked;
+            
             AudioPlayer.PlayMusicGameplay();
+            
+            if (!UIMediator.TutorialPopup.IsTutorialShownInitial)
+            {
+                _isPaused = true;
+                UIMediator.TutorialPopup.ShowInitial();
+            }
         }
 
         public void Update(float deltaTime)
@@ -24,6 +33,7 @@ namespace Core
             if(_isPaused)
                 return;
             
+            InputSystem.OnUpdate();
             CalendarSystem.OnUpdate();
             PeopleArriveSystem.OnUpdate(deltaTime);
 
@@ -36,18 +46,18 @@ namespace Core
         public void Exit()
         { 
             UIMediator.GameplayHUD.OnTutorialButtonClicked -= TutorialButtonClicked;
+            UIMediator.TutorialPopup.OnCloseButtonClicked -= TutorialCloseButtonClicked;
         }
         
         private void TutorialButtonClicked()
         {
             _isPaused = true;
-            UIMediator.TutorialPopup.OnCloseButtonClicked += TutorialCloseButtonClicked;
+
             UIMediator.TutorialPopup.Show();
         }
 
         private void TutorialCloseButtonClicked()
         {
-            UIMediator.TutorialPopup.OnCloseButtonClicked -= TutorialCloseButtonClicked;
             UIMediator.TutorialPopup.Hide();
             _isPaused = false;
         }

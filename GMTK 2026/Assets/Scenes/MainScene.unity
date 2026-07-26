@@ -665,9 +665,16 @@ MonoBehaviour:
   _balanceConfig:
     <HourTickIntervalS>k__BackingField: 1
     <LifesCount>k__BackingField: 3
-    <PeopleArriveMinS>k__BackingField: 5
-    <PeopleArriveMaxS>k__BackingField: 15
-    <MinFoodToBuyNewBatch>k__BackingField: 3
+    <PeopleArriveS>k__BackingField:
+      <Min>k__BackingField: 5
+      <Max>k__BackingField: 15
+    <MinFoodInFridgeToBuyNewBatch>k__BackingField: 3
+    <FoodInFridgeOnStart>k__BackingField:
+      <Min>k__BackingField: 4
+      <Max>k__BackingField: 5
+    <FoodBringPerBag>k__BackingField:
+      <Min>k__BackingField: 3
+      <Max>k__BackingField: 6
   _previewContainer: {fileID: 1815808618}
 --- !u!1 &1753680933
 GameObject:

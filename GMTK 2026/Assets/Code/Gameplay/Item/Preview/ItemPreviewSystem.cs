@@ -53,6 +53,7 @@ namespace Core
             IsShowing = true;
             _isHiding = false;
             PlayAppear();
+            PreviewContainer.Show();
         }
 
         public void StartRotate(Vector2 mouseScreenPoint)
@@ -90,6 +91,7 @@ namespace Core
             EndRotate();
             _isHiding = true;
             PlayHide();
+            PreviewContainer.Hide();
         }
 
         public void HideInstantIfPreviewing(Item item)

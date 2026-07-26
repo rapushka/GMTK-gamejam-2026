@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 473b1162174c44faa571a00afac44406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Core.ItemPreviewContainer
+  _background: {fileID: 5565980378460613343}
+  _targetFade: 0.8
 --- !u!1 &3957182992049777123
 GameObject:
   m_ObjectHideFlags: 0

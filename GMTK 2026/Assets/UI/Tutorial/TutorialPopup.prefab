@@ -271,8 +271,8 @@ MonoBehaviour:
 
     2. The Regrigerator may not throw away spoiled food '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ea432512adfd2c547a55db0b92590692, type: 2}
-  m_sharedMaterial: {fileID: 3297331778041560989, guid: ea432512adfd2c547a55db0b92590692, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 38e298ad166343046aea85ecc910054a, type: 2}
+  m_sharedMaterial: {fileID: -2233777636284604271, guid: 38e298ad166343046aea85ecc910054a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -296,13 +296,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -338,7 +338,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &3041169632011442263
@@ -528,8 +528,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'This SMART model maintains spoiled food by itself. '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ea432512adfd2c547a55db0b92590692, type: 2}
-  m_sharedMaterial: {fileID: 3297331778041560989, guid: ea432512adfd2c547a55db0b92590692, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 38e298ad166343046aea85ecc910054a, type: 2}
+  m_sharedMaterial: {fileID: -2233777636284604271, guid: 38e298ad166343046aea85ecc910054a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -559,7 +559,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -666,8 +666,8 @@ MonoBehaviour:
   m_text: On next pages you will get the detailed information on the operation and
     features of SMART refrigerators.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ea432512adfd2c547a55db0b92590692, type: 2}
-  m_sharedMaterial: {fileID: 3297331778041560989, guid: ea432512adfd2c547a55db0b92590692, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 38e298ad166343046aea85ecc910054a, type: 2}
+  m_sharedMaterial: {fileID: -2233777636284604271, guid: 38e298ad166343046aea85ecc910054a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -697,7 +697,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1460,6 +1460,30 @@ PrefabInstance:
         it
         into the trash can '
       objectReference: {fileID: 0}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 38e298ad166343046aea85ecc910054a, type: 2}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2233777636284604271, guid: 38e298ad166343046aea85ecc910054a, type: 2}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1064211401547563995, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_Name
       value: TutorialPage 2
@@ -1490,6 +1514,30 @@ PrefabInstance:
 
         with current
         date '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 38e298ad166343046aea85ecc910054a, type: 2}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2233777636284604271, guid: 38e298ad166343046aea85ecc910054a, type: 2}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2720263037726649220, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_text
@@ -1579,9 +1627,33 @@ PrefabInstance:
       propertyPath: m_text
       value: How SMART Works
       objectReference: {fileID: 0}
+    - target: {fileID: 3327332596685538217, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327332596685538217, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327332596685538217, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 7045481498761696868, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_text
       value: How SMART Works
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045481498761696868, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045481498761696868, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045481498761696868, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 8087585203545943706, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_text
@@ -1636,12 +1708,28 @@ PrefabInstance:
       value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 38e298ad166343046aea85ecc910054a, type: 2}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_fontSizeBase
       value: 32
       objectReference: {fileID: 0}
     - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2233777636284604271, guid: 38e298ad166343046aea85ecc910054a, type: 2}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1064211401547563995, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_Name
@@ -1677,7 +1765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_fontSize
-      value: 50
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_fontStyle
@@ -1685,7 +1773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_fontSizeBase
-      value: 50
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 3169108694235558554, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_Pivot.x
@@ -1771,6 +1859,14 @@ PrefabInstance:
       propertyPath: m_text
       value: Model Description
       objectReference: {fileID: 0}
+    - target: {fileID: 3327332596685538217, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327332596685538217, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 3463369638099025200, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_Name
       value: RefrigeratorMain
@@ -1849,6 +1945,14 @@ PrefabInstance:
         echnology'
       objectReference: {fileID: 0}
     - target: {fileID: 7045481498761696868, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045481498761696868, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045481498761696868, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 1
       objectReference: {fileID: 0}
@@ -1917,7 +2021,7 @@ PrefabInstance:
     - target: {fileID: 138533965016646468, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 435177955, guid: 480c134ca6a370d4792aa55560e1e51c, type: 3}
+      objectReference: {fileID: 21300000, guid: 39c704c15c4178748826ff397a68914e, type: 3}
     - target: {fileID: 138533965016646468, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -1944,6 +2048,30 @@ PrefabInstance:
         replace it
 
         FOR FREE!!!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 38e298ad166343046aea85ecc910054a, type: 2}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2233777636284604271, guid: 38e298ad166343046aea85ecc910054a, type: 2}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1064211401547563995, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_Name
@@ -1976,6 +2104,30 @@ PrefabInstance:
     - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_text
       value: The SMART Technology is experimental!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 38e298ad166343046aea85ecc910054a, type: 2}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2233777636284604271, guid: 38e298ad166343046aea85ecc910054a, type: 2}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2720263037726649220, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_text
@@ -2065,6 +2217,18 @@ PrefabInstance:
       propertyPath: m_text
       value: We Care About Our Buyers
       objectReference: {fileID: 0}
+    - target: {fileID: 3327332596685538217, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327332596685538217, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327332596685538217, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 70
+      objectReference: {fileID: 0}
     - target: {fileID: 3538058521787389907, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2084,6 +2248,18 @@ PrefabInstance:
     - target: {fileID: 7045481498761696868, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_text
       value: Warning!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045481498761696868, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045481498761696868, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045481498761696868, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 8087585203545943706, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_text
@@ -2170,6 +2346,30 @@ PrefabInstance:
 
         to find the Expiration Date'
       objectReference: {fileID: 0}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 38e298ad166343046aea85ecc910054a, type: 2}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2233777636284604271, guid: 38e298ad166343046aea85ecc910054a, type: 2}
+    - target: {fileID: 756920681499852028, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1064211401547563995, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_Name
       value: TutorialPage 1
@@ -2181,6 +2381,30 @@ PrefabInstance:
     - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_text
       value: "1. SMART refrigerator inspects food by double-clicking \non food objects "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 38e298ad166343046aea85ecc910054a, type: 2}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -2233777636284604271, guid: 38e298ad166343046aea85ecc910054a, type: 2}
+    - target: {fileID: 2051439633533901112, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2720263037726649220, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_text
@@ -2270,9 +2494,37 @@ PrefabInstance:
       propertyPath: m_text
       value: How SMART Works
       objectReference: {fileID: 0}
+    - target: {fileID: 3327332596685538217, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327332596685538217, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3327332596685538217, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6749012761049665922, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7045481498761696868, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_text
       value: How SMART Works
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045481498761696868, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSize
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045481498761696868, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7045481498761696868, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 8087585203545943706, guid: 7e09614d4cd0fdc4dadee930854ca4c7, type: 3}
       propertyPath: m_text

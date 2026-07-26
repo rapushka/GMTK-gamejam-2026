@@ -12,6 +12,7 @@ namespace Core
         private static ScreensMediator ScreensMediator => ServiceLocator.Get<ScreensMediator>();
         private static CalendarSystem  CalendarSystem  => ServiceLocator.Get<CalendarSystem>();
         private static ItemsContainer  ItemsContainer  => ServiceLocator.Get<ItemsContainer>();
+        private static AudioPlayer     AudioPlayer     => ServiceLocator.Get<AudioPlayer>();
 
         private Vector2 _grabOffset;
         private Vector2 _startPosition;
@@ -57,6 +58,8 @@ namespace Core
 
             if (isDroppedInFridge)
             {
+                PlayDropSound();
+
                 DropOnClosestShelf();
                 return;
             }
@@ -71,6 +74,26 @@ namespace Core
             }
 
             ReturnToStart();
+        }
+
+        private void PlayDropSound()
+        {
+            switch (Key)
+            {
+                case ItemKey.Cola:
+                case ItemKey.EnergyDrink:
+                    AudioPlayer.PlaySound(SoundKey.DropEnergyDrink);
+                    break;
+                case ItemKey.MeetBeen:
+                    AudioPlayer.PlaySound(SoundKey.DropMeenBeens);
+                    break;
+                case ItemKey.Yogurt:
+                    AudioPlayer.PlaySound(SoundKey.DropMilk);
+                    break;
+                case ItemKey.Unknown:
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
 
         private void ReturnToStart()

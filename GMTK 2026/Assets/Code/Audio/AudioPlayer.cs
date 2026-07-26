@@ -1,5 +1,7 @@
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.Audio;
+using Debug = UnityEngine.Debug;
 
 namespace Core
 {
@@ -29,6 +31,7 @@ namespace Core
 
             _musicMixin = new(_mainMenuMusic, _gameplayMusic);
             _sfxPool.Init();
+            _soundsCollection.Init();
         }
 
         public void PlayMusicMainMenu() => _musicMixin.PlayMainMenu();

@@ -8,6 +8,7 @@ namespace Core
     {
         private static BalanceConfig   BalanceConfig   => ServiceLocator.Get<BalanceConfig>();
         private static ItemsContainer  ItemsContainer  => ServiceLocator.Get<ItemsContainer>();
+        private static AudioPlayer     AudioPlayer     => ServiceLocator.Get<AudioPlayer>();
         private static ItemSpawnSystem ItemSpawnSystem => ServiceLocator.Get<ItemSpawnSystem>();
         private static ScreensMediator ScreensMediator => ServiceLocator.Get<ScreensMediator>();
 
@@ -18,6 +19,8 @@ namespace Core
             var foodCountToBring = BalanceConfig.FoodBringPerBag.GetRandom();
             for (var i = 0; i < foodCountToBring; i++)
             {
+                AudioPlayer.PlaySound(SoundKey.Pop);
+                
                 var item = ItemSpawnSystem.CreateItem();
                 var targetPosition = fridge.CreateRandomPosition(item);
 

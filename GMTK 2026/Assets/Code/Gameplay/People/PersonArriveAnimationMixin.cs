@@ -7,14 +7,17 @@ namespace Core
     public class PersonArriveAnimationMixin
     {
         private static ScreensMediator ScreensMediator => ServiceLocator.Get<ScreensMediator>();
-
+        private static AudioPlayer     AudioPlayer     => ServiceLocator.Get<AudioPlayer>();
+        
         private readonly Vector3 _initRotation = new(334.17f, 358.04f, 0.86f);
         private readonly Vector3 _targetRotation = new(346.75f, 299.09f, 22.39f);
 
         private static Fridge Fridge => ScreensMediator.GameScreen.Fridge;
-
+        
         public async UniTask PlayArrive(PersonComponent person)
         {
+            
+            AudioPlayer.PlaySound(SoundKey.FridgeOpen);
             // Fridge.DoorPivot.transform.eulerAngles = _initRotation;
             await Fridge.DoorPivot.transform.DORotate(_targetRotation, 0.5f)
                     // .From(_initRotation)

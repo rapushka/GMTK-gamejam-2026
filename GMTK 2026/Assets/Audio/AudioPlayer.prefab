@@ -48,7 +48,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -255,7 +255,27 @@ MonoBehaviour:
   _mainMenuMusic: {fileID: 2948800081186924592}
   _gameplayMusic: {fileID: 5294839540068326146}
   _soundsCollection:
-    _clips: []
+    _clips:
+    - <Key>k__BackingField: MainSceneMusic
+      <Clip>k__BackingField: {fileID: 8300000, guid: b089ccf2ab852a229841e997f91c7516, type: 3}
+    - <Key>k__BackingField: MenuMusic
+      <Clip>k__BackingField: {fileID: 8300000, guid: a032a985c9029677f91e2829cf30c163, type: 3}
+    - <Key>k__BackingField: DropMilk
+      <Clip>k__BackingField: {fileID: 8300000, guid: 7b72ef262e1e5b9069b332802778723d, type: 3}
+    - <Key>k__BackingField: DropEnergyDrink
+      <Clip>k__BackingField: {fileID: 8300000, guid: ce801cc4ee6d4dba88f6b108eeb7e0b6, type: 3}
+    - <Key>k__BackingField: DropMeetBeens
+      <Clip>k__BackingField: {fileID: 8300000, guid: e4a628fa046a6003080aa693fd5aa2d6, type: 3}
+    - <Key>k__BackingField: FootSteps
+      <Clip>k__BackingField: {fileID: 8300000, guid: e226641d0eae774de8c3778b2827b408, type: 3}
+    - <Key>k__BackingField: FridgeOpen
+      <Clip>k__BackingField: {fileID: 8300000, guid: a8b17c6e7c38df3cbbb3a44c951330f3, type: 3}
+    - <Key>k__BackingField: GroceriesBag_1
+      <Clip>k__BackingField: {fileID: 8300000, guid: 6a550287deb508696a98ff5fe86ce8b2, type: 3}
+    - <Key>k__BackingField: GroceriesBag_2
+      <Clip>k__BackingField: {fileID: 8300000, guid: e31c77043228b66e3bae587f66ff6781, type: 3}
+    - <Key>k__BackingField: GroceriesBag_3
+      <Clip>k__BackingField: {fileID: 8300000, guid: 763b6f6e00f463c5784ec348926be1b2, type: 3}
   _sfxPool: {fileID: 5461642715635609079}
   _audioMixer: {fileID: 24300002, guid: f442458b01dc668e3a3415c56d050ea1, type: 2}
 --- !u!1 &7489302459228587355
@@ -306,7 +326,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128

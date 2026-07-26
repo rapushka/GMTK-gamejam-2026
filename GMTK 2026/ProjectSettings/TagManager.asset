@@ -59,6 +59,9 @@ TagManager:
   - name: Food
     uniqueID: 4159945795
     locked: 0
+  - name: bubble
+    uniqueID: 4026108031
+    locked: 0
   m_RenderingLayers:
   - Default
   - Light Layer 1

@@ -53,6 +53,14 @@ namespace Core
             return _items[randomIndex];
         }
 
+        public ItemKey PickRandomUniqueKey()
+        {
+            var uniqueKeys = _items.Select(item => item.Key).Distinct().ToList();
+            return uniqueKeys.PickRandom();
+        }
+
+        public Item FindByKey(ItemKey key) => _items.FirstOrDefault(item => item.Key == key);
+
         public void DestroyAllItems()
         {
             if (_items.Count == 0)

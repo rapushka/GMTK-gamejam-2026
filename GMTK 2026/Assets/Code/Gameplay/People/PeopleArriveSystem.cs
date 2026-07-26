@@ -61,7 +61,7 @@ namespace Core
         private async UniTask ArrivePersonToEat(PersonComponent person)
         {
             await _animationMixin.PlayArrive(person);
-            await _eatItemsMixin.EatItems();
+            await _eatItemsMixin.EatItems(person);
             await _animationMixin.PlayHide(person);
 
             OnPersonLeft();

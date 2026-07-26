@@ -16,5 +16,6 @@ namespace Core
 
         [field: SerializeField] public PersonComponent[]    PersonPrefabs           { get; private set; }
         [field: SerializeField] public HandWithBagComponent HandWithGroceriesPrefab { get; private set; }
+        [field: SerializeField] public BubbleComponent      BubblePrefab            { get; private set; }
     }
 }

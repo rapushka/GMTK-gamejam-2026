@@ -43,6 +43,22 @@ namespace Core
         {
             _grabOffset = WorldPosition - mouseWorld;
             _startPosition = WorldPosition;
+            switch (Key)
+            {
+                case ItemKey.Cola:
+                case ItemKey.EnergyDrink:
+                    AudioPlayer.PlaySound(SoundKey.DragEnergyDrink);
+                    break;
+                case ItemKey.MeetBeen:
+                    AudioPlayer.PlaySound(SoundKey.DragMeetBeens);
+                    break;
+                case ItemKey.Yogurt:
+                    AudioPlayer.PlaySound(SoundKey.DragMilk);
+                    break;
+                case ItemKey.Unknown:
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
         }
 
         public void Drag(Vector2 mouseWorld)
@@ -74,6 +90,7 @@ namespace Core
 
             if (isDroppedInTrash)
             {
+                AudioPlayer.PlaySound(SoundKey.Trash);
                 ItemsContainer.ThrowInTrash(this);
                 return;
             }

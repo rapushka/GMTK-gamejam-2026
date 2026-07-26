@@ -17,5 +17,12 @@ namespace Core
         public const string Pop = "Pop";
         public const string Krok1 = "Krok1";
         public const string Krok2 = "Krok2";
+        public const string CloseFridge = "CloseFridge";
+        public const string DudeLeave =  "DudeLeave";
+        public const string DragMilk = "DragMilk";
+        public const string DragMeetBeens = "DragMeetBeens";
+        public const string DragEnergyDrink = "DragEnergyDrink";
+        public const string Fail = "Fail";
+        public const string Trash =  "Trash";
     }
 }

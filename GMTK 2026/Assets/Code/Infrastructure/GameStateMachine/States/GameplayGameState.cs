@@ -5,8 +5,13 @@ namespace Core
         private static CalendarSystem     CalendarSystem     => ServiceLocator.Get<CalendarSystem>();
         private static LivesSystem        LivesSystem        => ServiceLocator.Get<LivesSystem>();
         private static PeopleArriveSystem PeopleArriveSystem => ServiceLocator.Get<PeopleArriveSystem>();
+        
+        private GameStateMachine _stateMachine;
 
-        public void Enter(GameStateMachine stateMachine) { }
+        public void Enter(GameStateMachine stateMachine)
+        {
+            _stateMachine = stateMachine;
+        }
 
         public void Update(float deltaTime)
         {
@@ -15,7 +20,7 @@ namespace Core
 
             if (LivesSystem.AreAllLivesLost)
             {
-                // TODO: GAME OVER
+                _stateMachine.Enter<LoseGameState>();
             }
         }
     }

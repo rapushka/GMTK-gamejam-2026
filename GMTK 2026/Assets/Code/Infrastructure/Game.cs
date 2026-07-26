@@ -11,7 +11,8 @@ namespace Core
             new BootstrapGameState(),
             new MainMenuGameState(),
             new StartGameState(),
-            new GameplayGameState()
+            new GameplayGameState(),
+            new LoseGameState()
         );
 
         public void OnGameLoaded()

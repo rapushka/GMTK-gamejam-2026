@@ -73,7 +73,7 @@ namespace Core
 
         private void ResetTimer()
         {
-            _timeLeft = Random.Range(BalanceConfig.PeopleArriveMinS, BalanceConfig.PeopleArriveMaxS);
+            _timeLeft = BalanceConfig.PeopleArriveS.GetRandom();
         }
     }
 }

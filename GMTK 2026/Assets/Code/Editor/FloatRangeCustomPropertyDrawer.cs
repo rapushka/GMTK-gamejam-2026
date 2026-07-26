@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace Core.Editor
 {
-    [CustomPropertyDrawer(typeof(IntRange))]
-    public class IntRangeCustomPropertyDrawer : PropertyDrawer
+    [CustomPropertyDrawer(typeof(FloatRange))]
+    public class FloatRangeCustomPropertyDrawer : PropertyDrawer
     {
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {

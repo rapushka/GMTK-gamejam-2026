@@ -5,18 +5,18 @@ using Random = UnityEngine.Random;
 namespace Core
 {
     [Serializable]
-    public struct IntRange
+    public struct FloatRange
     {
-        [field: SerializeField] public int Min { get; private set; }
-        [field: SerializeField] public int Max { get; private set; }
+        [field: SerializeField] public float Min { get; private set; }
+        [field: SerializeField] public float Max { get; private set; }
 
-        public IntRange(int min, int max)
+        public FloatRange(float min, float max)
         {
             Min = min;
             Max = max;
         }
 
-        public int GetRandom(bool exclusive = true)
+        public float GetRandom(bool exclusive = true)
         {
             if (Min >= Max)
                 return Min;

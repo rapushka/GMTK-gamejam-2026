@@ -16,8 +16,9 @@ namespace Core
             var thoughtKey = ItemsContainer.PickRandomUniqueKey();
             var itemSprite = GetItemSprite(thoughtKey);
 
-            var bubble = Object.Instantiate(AssetsProvider.BubblePrefab, person.BubblePivot);
-            bubble.transform.localPosition = Vector3.zero;
+            var bubble = Object.Instantiate(AssetsProvider.BubblePrefab);
+            bubble.transform.position = person.BubblePivot.position;
+            bubble.transform.rotation = Quaternion.identity;
 
             await bubble.Appear(itemSprite);
 

@@ -4,16 +4,20 @@ namespace Core
 {
     public class MainMenuGameState : IGameState, IExitGameState
     {
-        private static UIMediator      UiMediator      => ServiceLocator.Get<UIMediator>();
-        
+        private static UIMediator  UiMediator  => ServiceLocator.Get<UIMediator>();
+        private static AudioPlayer AudioPlayer => ServiceLocator.Get<AudioPlayer>();
+
         private GameStateMachine _stateMachine;
-        
+
         public void Enter(GameStateMachine stateMachine)
         {
             _stateMachine = stateMachine;
             UiMediator.MainMenu.Initialize();
             UiMediator.MainMenu.OnPlayButtonPressed += OnPlayButtonPressed;
             UiMediator.MainMenu.OnExitButtonPressed += OnExitButtonPressed;
+
+            AudioPlayer.PlayMusicMainMenu();
+
             UiMediator.OpenMainMenu();
         }
 
